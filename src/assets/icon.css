@@ -1,0 +1,137 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+}
+.icon-search {
+  background: url('icon/icon-search.svg');
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+.icon-user {
+  background: url('icon/icon-user.svg');
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+.icon-edit {
+  background: url('icon/icon-edit.svg') no-repeat center center;
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+  background-size: 16px 14px;
+}
+.icon-eye {
+  background: url('icon/icon-eye.svg');
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+.icon-like {
+  background: url('icon/icon-like.svg');
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+.icon-like-24 {
+  background: url('icon/icon-like-24.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-comment {
+  background: url('icon/icon-comment.svg');
+  width: 20px;
+  height: 20px;
+  background-size: 20px 20px;
+}
+.icon-decorate {
+  background: url('icon/icon-decorate.svg');
+  width: 39px;
+  height: 34px;
+  background-size: contain;
+}
+.icon-user-account {
+  background: url('icon/icon-user-account.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-activity {
+  background: url('icon/icon-user-activity.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-house {
+  background: url('icon/icon-user-house.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-volunteer {
+  background: url('icon/icon-user-volunteer.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-integral {
+  background: url('icon/icon-user-integral.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-comment {
+  background: url('icon/icon-user-comment.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-view {
+  background: url('icon/icon-user-view.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-message {
+  background: url('icon/icon-user-message.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-feedback {
+  background: url('icon/icon-user-feedback.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-survey {
+  background: url('icon/icon-user-survey.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-user-logout {
+  background: url('icon/icon-user-logout.svg');
+  width: 24px;
+  height: 24px;
+  background-size: 24px 24px;
+}
+.icon-wx {
+  background: url('icon/icon-wx.svg');
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}
+.icon-wb {
+  background: url('icon/icon-wb.svg');
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}
+.icon-link {
+  background: url('icon/icon-link.svg');
+  width: 40px;
+  height: 40px;
+  background-size: 40px 40px;
+}

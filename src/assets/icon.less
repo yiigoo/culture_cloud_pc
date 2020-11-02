@@ -1,0 +1,114 @@
+.size20() {
+	width: 20px;
+	height: 20px;
+	background-size: 20px 20px;
+}
+.size24() {
+	width: 24px;
+	height: 24px;
+	background-size: 24px 24px;
+}
+.size40() {
+	width: 40px;
+	height: 40px;
+	background-size: 40px 40px;
+}
+@images: "./icon";
+
+.icon{
+	display: inline-block;
+	vertical-align: middle;
+	&-search{
+		background: url('@{images}/icon-search.svg');
+		.size20()
+	}
+	&-user{
+		background: url('@{images}/icon-user.svg');
+		.size20()
+	}
+	&-edit{
+		background: url('@{images}/icon-edit.svg') no-repeat center center;
+		.size20();
+		background-size: 16px 14px;
+	}
+	&-eye{
+		background: url('@{images}/icon-eye.svg');
+		.size20();
+	}
+	&-like{
+		background: url('@{images}/icon-like.svg');
+		.size20();
+	}
+	&-like-24{
+		background: url('@{images}/icon-like-24.svg');
+		.size24();
+	}
+	&-comment{
+		background: url('@{images}/icon-comment.svg');
+		.size20();
+	}
+	&-decorate{
+		background: url('@{images}/icon-decorate.svg');
+		width: 39px;
+		height: 34px;
+		background-size: contain;
+	}
+	&-user-account{
+		background: url('@{images}/icon-user-account.svg');
+		.size24()
+	}
+	&-user-activity{
+		background: url('@{images}/icon-user-activity.svg');
+		.size24()
+	}
+	&-user-house{
+		background: url('@{images}/icon-user-house.svg');
+		.size24()
+	}
+	&-user-volunteer{
+		background: url('@{images}/icon-user-volunteer.svg');
+		.size24()
+	}
+	&-user-integral{
+		background: url('@{images}/icon-user-integral.svg');
+		.size24()
+	}
+	&-user-comment{
+		background: url('@{images}/icon-user-comment.svg');
+		.size24()
+	}
+	&-user-view{
+		background: url('@{images}/icon-user-view.svg');
+		.size24()
+	}
+	&-user-message{
+		background: url('@{images}/icon-user-message.svg');
+		.size24()
+	}
+	&-user-feedback{
+		background: url('@{images}/icon-user-feedback.svg');
+		.size24()
+	}
+	&-user-survey{
+		background: url('@{images}/icon-user-survey.svg');
+		.size24()
+	}
+	&-user-logout{
+		background: url('@{images}/icon-user-logout.svg');
+		.size24()
+	}
+
+	&-wx{
+		background: url('@{images}/icon-wx.svg');
+		.size40()
+	}
+	&-wb{
+		background: url('@{images}/icon-wb.svg');
+		.size40()
+	}
+	&-link{
+		background: url('@{images}/icon-link.svg');
+		.size40()
+	}
+}
+
