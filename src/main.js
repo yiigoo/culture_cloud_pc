@@ -5,6 +5,7 @@ import Routers from './router.js'
 import ViewUI from 'view-design'
 import 'view-design/dist/styles/iview.css'
 import '@/styles/base.less'
+import '@/styles/icon.less'
 
 Vue.use(VueRouter)
 Vue.use(ViewUI)
