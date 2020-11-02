@@ -18,9 +18,7 @@
                     </a>
                 </div>
                 <div class="item">
-                    <a @click="changeIndex('user')">
-                        <i class="icon icon-user"></i>
-                    </a>
+					<router-link to="user"><i class="icon icon-user"></i></router-link>
                 </div>
             </div>
         </div>
