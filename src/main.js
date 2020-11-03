@@ -9,6 +9,8 @@ import '@/styles/base.less'
 import '@/styles/icon.less'
 
 import webComponents from '@/components/index'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+Vue.use(VueAwesomeSwiper)
 
 Vue.use(VueRouter)
 Vue.use(ViewUI)

@@ -1,47 +1,26 @@
 <template>
-	<div>
-		<div class="banner-swiper">
-            <Carousel loop arrow="never" :autoplay-speed="4000">
+    <div>
+        <!-- banner -->
+        <div class="banner-carousel">
+            <Carousel :loop="carouselReady" arrow="never">
                 <CarouselItem>
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
+                    <div class="item" :style="{ 'background-image': `url(${require('../assets/banner/index.png')})` }">
+                    </div>
                 </CarouselItem>
                 <CarouselItem>
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
-                    111
-                    <br />
+                    <div class="item" :style="{ 'background-image': `url(${require('../assets/banner/index.png')})` }">
+                    </div>
+                </CarouselItem>
+                <CarouselItem>
+                    <div class="item" :style="{ 'background-image': `url(${require('../assets/banner/index.png')})` }">
+                    </div>
                 </CarouselItem>
             </Carousel>
         </div>
-        
         <div class="page-conainter">
             <div class="home-md">
                 <div class="clearfix home-row">
+                    <!-- 资讯 -->
                     <div class="home-news-md pull-left">
                         <div class="img"><img src="../assets/home-news.png" alt="" /></div>
                         <div class="wrapper">
@@ -79,81 +58,113 @@
                             </div>
                         </div>
                     </div>
+                    <!-- 指引 -->
                     <div class="home-guide-md pull-right">
                         <div class="list">
                             <ul>
-                                <li><a href="">用户登录</a></li>
-                                <li><a href="">志愿者报名</a></li>
-                                <li><a href="">活动预订</a></li>
-                                <li><a href="">场馆预订</a></li>
-                                <li><a href="">文旅服务</a></li>
-                                <li><a href="">志愿者活动</a></li>
+                                <li>
+                                    <router-link to="/user/login">用户登录</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="">志愿者报名</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="">活动预订</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="">场馆预订</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="">文旅服务</router-link>
+                                </li>
+                                <li>
+                                    <router-link to="">志愿者活动</router-link>
+                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                
+                <!-- 文旅活动 -->
                 <div class="home-row">
                     <div class="home-title">
                         <div class="font-title font-title-activity">
                             文旅活动
                         </div>
                     </div>
-                    <div class="base-card-list clearfix">
-                        <div class="item">
-                            <a href="" class="img">
-                                <img src="../assets/temp/101.png" alt="">
-                            </a>
-                            <div class="wrapper">
-                                <div class="title">
-                                    <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                    <div class="home-swiper">
+                        <swiper ref="mySwiper" class="base-card-list" :options="swiperOption">
+                            <swiper-slide class="item">
+                                <a href="" class="img">
+                                    <img src="../assets/temp/101.png" alt="">
+                                </a>
+                                <div class="wrapper">
+                                    <div class="title">
+                                        <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                                    </div>
+                                    <div class="sub">地点：文化馆三楼5号会议室</div>
                                 </div>
-                                
-                                <div class="sub">地点：文化馆三楼5号会议室</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <a href="" class="img">
-                                <img src="../assets/temp/101.png" alt="">
-                            </a>
-                            <div class="wrapper">
-                                <div class="title">
-                                    <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                            </swiper-slide>
+                            <swiper-slide class="item">
+                                <a href="" class="img">
+                                    <img src="../assets/temp/101.png" alt="">
+                                </a>
+                                <div class="wrapper">
+                                    <div class="title">
+                                        <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                                    </div>
+                                    <div class="sub">地点：文化馆三楼5号会议室</div>
                                 </div>
-                                
-                                <div class="sub">地点：文化馆三楼5号会议室</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <a href="" class="img">
-                                <img src="../assets/temp/101.png" alt="">
-                            </a>
-                            <div class="wrapper">
-                                <div class="title">
-                                    <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                            </swiper-slide>
+                            <swiper-slide class="item">
+                                <a href="" class="img">
+                                    <img src="../assets/temp/101.png" alt="">
+                                </a>
+                                <div class="wrapper">
+                                    <div class="title">
+                                        <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                                    </div>
+                                    <div class="sub">地点：文化馆三楼5号会议室</div>
                                 </div>
-                                
-                                <div class="sub">地点：文化馆三楼5号会议室</div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <a href="" class="img">
-                                <img src="../assets/temp/101.png" alt="">
-                            </a>
-                            <div class="wrapper">
-                                <div class="title">
-                                    <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                            </swiper-slide>
+                            <swiper-slide class="item">
+                                <a href="" class="img">
+                                    <img src="../assets/temp/101.png" alt="">
+                                </a>
+                                <div class="wrapper">
+                                    <div class="title">
+                                        <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                                    </div>
+                                    <div class="sub">地点：文化馆三楼5号会议室</div>
                                 </div>
-                                
-                                <div class="sub">地点：文化馆三楼5号会议室</div>
-                            </div>
-                        </div>
+                            </swiper-slide>
+                            <swiper-slide class="item">
+                                <a href="" class="img">
+                                    <img src="../assets/temp/101.png" alt="">
+                                </a>
+                                <div class="wrapper">
+                                    <div class="title">
+                                        <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                                    </div>
+                                    <div class="sub">地点：文化馆三楼5号会议室</div>
+                                </div>
+                            </swiper-slide>
+                            <swiper-slide class="item">
+                                <a href="" class="img">
+                                    <img src="../assets/temp/101.png" alt="">
+                                </a>
+                                <div class="wrapper">
+                                    <div class="title">
+                                        <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
+                                    </div>
+                                    <div class="sub">地点：文化馆三楼5号会议室</div>
+                                </div>
+                            </swiper-slide>
+                        </swiper>
+                        <i class="icon icon-arrow-swiper-left"></i>
+                        <i class="icon icon-arrow-swiper-right"></i>
                     </div>
                 </div>
-
-                <i class="icon icon-arrow-swiper-left"></i>
-                <i class="icon icon-arrow-swiper-right"></i>
-
+                <!-- 文旅作品 -->
                 <div class="home-row">
                     <div class="home-title">
                         <div class="font-title font-title-works">
@@ -207,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- 热门景点 -->
                 <div class="home-row">
                     <div class="home-server-list">
                         <div class="left">
@@ -277,7 +288,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- 文化社团 -->
                 <div class="home-row">
                     <div class="home-title">
                         <div class="font-title font-title-team">
@@ -320,7 +331,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- 品牌推荐 -->
                 <div class="home-row">
                     <div class="home-title">
                         <div class="font-title font-title-brand">
@@ -372,17 +383,62 @@
                 </div>
             </div>
         </div>
-	</div>
+    </div>
 </template>
 
 <script>
-	export default {
-		name: 'Index',
-		components: {
-        },
+    import {
+        swiper,
+        swiperSlide
+    } from 'vue-awesome-swiper'
+    export default {
+        name: 'Index',
+        components: {},
         data() {
             return {
+                carouselReady: false, // carousel 直接loop有bug
+                swiperOption: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                    autoplay: {
+                        disableOnInteraction: false,
+                        delay: 5000
+                    },
+                    loop: true,
+                    navigation: {
+                        nextEl: '.icon-arrow-swiper-right',
+                        prevEl: '.icon-arrow-swiper-left',
+                    },
+                }
             }
+        },
+        mounted() {
+            console.log(swiper)
+            // carousel 直接loop有bug
+            this.$nextTick(() => {
+                this.carouselReady = true
+            })
+            //     // swiper
+            //    var a = new Swiper ('.swiper-container', {
+            //         slidesPerView: 4,
+            //         spaceBetween: 20,
+            //         slidesPerGroup: 1,
+            //         loopFillGroupWithBlank: true,
+            //         loop: true,
+            //         autoplay:true,
+            //         navigation: {
+            //             nextEl: '.icon-arrow-swiper-left',
+            //             prevEl: '.icon-arrow-swiper-right',
+            //         },
+            //     })
+            //     a.slidePrev()
+            //     a.slideNext()
+            //     a.slideNext()
+            //     a.slideNext()
+            console.log(this.$refs['mySwiper'])
         }
-	}
+    }
 </script>
+<style lang="less" scoped>
+    @import '../styles/swiper.min.css';
+</style>

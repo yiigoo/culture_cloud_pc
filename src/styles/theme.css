@@ -26,10 +26,10 @@
 .ivu-page {
   display: inline-block;
 }
-.banner-swiper .ivu-carousel-dots li {
+.banner-carousel .ivu-carousel-dots li {
   margin: 0 3px;
 }
-.banner-swiper .ivu-carousel-dots li button {
+.banner-carousel .ivu-carousel-dots li button {
   width: 30px;
   height: 6px;
   border-radius: 1px;
@@ -37,9 +37,9 @@
   border-radius: 3px;
   opacity: 1;
 }
-.banner-swiper .ivu-carousel-dots li.ivu-carousel-active button {
+.banner-carousel .ivu-carousel-dots li.ivu-carousel-active button {
   background: #fff;
 }
-.banner-swiper .ivu-carousel-dots-inside {
+.banner-carousel .ivu-carousel-dots-inside {
   bottom: 16px;
 }

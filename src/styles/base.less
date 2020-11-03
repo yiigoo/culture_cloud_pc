@@ -157,13 +157,33 @@ a.img:hover img{
 		}
 	}
 }
-.banner-swiper{
+.banner-carousel{
+	width: 100%;
+	position: relative;
+	height: 540px;
 	margin-top: -50px;
 	.item{
 		height: 540px;
 		background-repeat: no-repeat;
 		background-position: center center;
-		width: 100%;
+	}
+}
+
+.home-swiper{
+	position: relative;
+	.icon-arrow-swiper-left,.icon-arrow-swiper-right{
+		position: absolute;
+		top: 75px;
+		z-index: 2;
+		&:focus{
+			outline: 0;
+		}
+	}
+	.icon-arrow-swiper-left{
+		left: -36px;
+	}
+	.icon-arrow-swiper-right{
+		right: -36px
 	}
 }
 
@@ -318,6 +338,7 @@ a.img:hover img{
 
 
 .base-card-list{
+	padding-bottom: 5px;
 	.item{
 		width: 280px;
 		float: left;

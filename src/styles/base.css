@@ -147,14 +147,35 @@ a.img:hover img {
 .header .bar .item-search .search-box input:focus {
   outline: none;
 }
-.banner-swiper {
+.banner-carousel {
+  width: 100%;
+  position: relative;
+  height: 540px;
   margin-top: -50px;
 }
-.banner-swiper .item {
+.banner-carousel .item {
   height: 540px;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 100%;
+}
+.home-swiper {
+  position: relative;
+}
+.home-swiper .icon-arrow-swiper-left,
+.home-swiper .icon-arrow-swiper-right {
+  position: absolute;
+  top: 75px;
+  z-index: 2;
+}
+.home-swiper .icon-arrow-swiper-left:focus,
+.home-swiper .icon-arrow-swiper-right:focus {
+  outline: 0;
+}
+.home-swiper .icon-arrow-swiper-left {
+  left: -36px;
+}
+.home-swiper .icon-arrow-swiper-right {
+  right: -36px;
 }
 .page-list-loading {
   position: relative;
@@ -297,6 +318,9 @@ a.img:hover img {
 }
 .font-title-server {
   background: url('../assets/font-server.svg') no-repeat center center;
+}
+.base-card-list {
+  padding-bottom: 5px;
 }
 .base-card-list .item {
   width: 280px;
