@@ -12,10 +12,13 @@
                 </ul>
             </div>
             <div class="bar">
-                <div class="item">
-                    <a href="#">
+                <div class="item item-search" :class="{active: searchVisible }">
+                    <a @click="showSearch">
                         <i class="icon icon-search"></i>
                     </a>
+					<div class="search-box" v-show="searchVisible">
+                        <input type="text" @keyup.enter="toSearch" v-model="keyword" />
+                    </div>
                 </div>
                 <div class="item">
 					<router-link to="user"><i class="icon icon-user"></i></router-link>
@@ -33,6 +36,8 @@
 		data() {
 			return {
 				currentMenu: '/',
+				searchVisible: false,
+				keyword: '',
 				menus: [
 					{
 						to: '/',
@@ -74,6 +79,20 @@
 			}
 		},
 		methods: {
+			showSearch() {
+				this.searchVisible = !this.searchVisible
+			},
+			toSearch() {
+				this.searchVisible = false
+				if( this.keyword.trim()) {
+					this.$router.push({
+						path: '/search',
+						query: {
+							keyword: this.keyword.trim()
+						}
+					})
+				}
+			}
 		},
 		watch: {
 			'$route.meta' (meta) {
@@ -84,6 +103,9 @@
 						this.currentMenu = currentMenu
 					}
 				})
+				if( !currentMenu) {
+					this.currentMenu = ''
+				}
 			}
 		},
 		mounted() {
