@@ -22,6 +22,48 @@ const routes = [
 		component: resolve => { require(['./pages/activity/list.vue'], resolve)}
 	},
 	{
+		path: '/venue',
+		meta: {
+			menu: '/venue'
+		},
+		component: resolve => { require(['./pages/venue/list.vue'], resolve)}
+	},
+	{
+		path: '/heritage',
+		meta: {
+			menu: '/heritage'
+		},
+		component: resolve => { require(['./pages/heritage/list.vue'], resolve)}
+	},
+	{
+		path: '/brand',
+		meta: {
+			menu: '/brand'
+		},
+		component: resolve => { require(['./pages/brand/list.vue'], resolve)}
+	},
+	{
+		path: '/culture-service',
+		meta: {
+			menu: '/culture-service'
+		},
+		component: resolve => { require(['./pages/cultureService/list.vue'], resolve)}
+	},
+	{
+		path: '/art-team',
+		meta: {
+			menu: '/art-team'
+		},
+		component: resolve => { require(['./pages/artTeam/list.vue'], resolve)}
+	},
+	{
+		path: '/volunteer',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/list.vue'], resolve)}
+	},
+	{
 		path: '/user',
 		redirect: '/user/account',
 		meta: {

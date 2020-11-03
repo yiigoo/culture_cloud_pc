@@ -343,57 +343,6 @@ a.img:hover img{
 			margin-right: 0;
 		}
 	}
-
-	&.span-3{
-		.tag{
-			background: #999999;
-			padding: 4px 18px;
-			border-radius: 4px 0 4px 0;
-			font-weight: bold;
-			position: absolute;
-			left:0;
-			top: 0;
-			color: #fff;
-		}
-		.tag.active{
-			background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
-			padding: 4px 18px;
-			border-radius: 4px 0 4px 0;
-			font-weight: bold;
-			position: absolute;
-			left:0;
-			top: 0;
-			color: #fff;
-		}
-		.item{
-			height: 400px;
-			width: 380px;
-			margin-bottom: 20px;
-			&:nth-child(3){
-				margin-right: 0;
-			}
-			&:nth-child(4){
-				margin-right: 20px;
-			}
-			.img{
-				height: 240px;
-				img{
-					line-height: 240px;
-				}
-			}
-			.title{
-				max-height: 54px;
-				line-height: 27px;
-				overflow: hidden;
-				font-size: 18px;
-				margin-bottom: 10px;
-			}
-			.sub{
-				font-size: 16px;
-				line-height: 27px;
-			}
-		}
-	}
 }
 
 .base-card-list-large{
@@ -406,6 +355,7 @@ a.img:hover img{
 		background-color: #fff;
 		border-radius: 8px;
 		transition: .4s box-shadow;
+		position: relative;
 		.tag{
 			background: #999999;
 			padding: 4px 18px;
@@ -415,6 +365,7 @@ a.img:hover img{
 			left:0;
 			top: 0;
 			color: #fff;
+			z-index: 1;
 		}
 		.tag.active{
 			background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
@@ -439,7 +390,6 @@ a.img:hover img{
 		.img{
 			display: block;
 			height: 240px;
-			position: relative;
 			text-align: center;
 			img{
 				border-radius: 8px 8px 0px 0px;

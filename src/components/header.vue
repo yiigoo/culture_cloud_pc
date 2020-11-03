@@ -47,27 +47,27 @@
 						name: '文旅活动',
 					},
 					{
-						to: '/x',
+						to: '/venue',
 						name: '场馆预订',
 					},
 					{
-						to: '/x',
+						to: '/heritage',
 						name: '非遗传承',
 					},
 					{
-						to: '/x',
+						to: '/brand',
 						name: '品牌推荐',
 					},
 					{
-						to: '/x',
+						to: '/culture-service',
 						name: '文旅服务',
 					},
 					{
-						to: '/x',
+						to: '/art-team',
 						name: '文化社团',
 					},
 					{
-						to: '/x',
+						to: '/volunteer',
 						name: '志愿者',
 					},
 				]
