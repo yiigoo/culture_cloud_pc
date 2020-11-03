@@ -17,8 +17,16 @@ module.exports = {
 			preProcessor: "less",
 			patterns: [
 				path.resolve(__dirname, "./src/styles/base.less"),
-				path.resolve(__dirname, "./src/styles/icon.less")
+				path.resolve(__dirname, "./src/styles/icon.less"),
+				path.resolve(__dirname, "./src/styles/theme.less")
 			]
 		}
-	}
+	},
+	css: {
+        loaderOptions: {
+            less: {
+                javascriptEnabled: true,
+            },
+        },
+    }
 }
