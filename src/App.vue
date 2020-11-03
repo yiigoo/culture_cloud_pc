@@ -12,8 +12,8 @@
 </template>
 
 <script>
-	import pageHeader from './components/header'
-	import pageFooter from './components/footer'
+	import pageHeader from './layout/header'
+	import pageFooter from './layout/footer'
 	export default {
 		components: { pageHeader , pageFooter },
 		data() {
