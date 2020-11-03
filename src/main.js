@@ -7,8 +7,12 @@ import 'view-design/dist/styles/iview.css'
 import '@/styles/base.less'
 import '@/styles/icon.less'
 
+import webComponents from '@/components/index'
+
 Vue.use(VueRouter)
 Vue.use(ViewUI)
+// 设置全局 webComponents
+Vue.use(webComponents)
 
 const router = new VueRouter({
     routes: Routers

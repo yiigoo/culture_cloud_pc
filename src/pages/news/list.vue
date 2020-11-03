@@ -1,10 +1,7 @@
 <template>
 	<div>
-		<div class="banner banner-swiper">
-            <div class="static">
-                <img src="../../assets/banner/activity.png" alt="" />
-            </div>
-        </div>
+        <!-- banner -->
+        <page-banner :url="require('../../assets/banner/news.png')"></page-banner>
         
         <div class="page-conainter clearfix">
             <div class="page-aside">
@@ -105,6 +102,8 @@
 	export default {
 		name: 'News',
 		components: {
-		}
+        },
+        mounted() {
+        }
 	}
 </script>

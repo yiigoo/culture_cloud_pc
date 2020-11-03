@@ -1,10 +1,7 @@
 <template>
 	<div>
-		<div class="banner banner-swiper">
-            <div class="static">
-                <img src="../../assets/banner/activity.png" alt="" />
-            </div>
-        </div>
+		<!-- banner -->
+        <page-banner :url="require('../../assets/banner/activity.png')"></page-banner>
         
         <div class="page-conainter">
             <div class="search-catalogue-md">
