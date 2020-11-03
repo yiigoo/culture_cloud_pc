@@ -1,0 +1,45 @@
+.ivu-page-item {
+  min-width: 40px;
+  height: 40px;
+  line-height: 38px;
+  font-size: 18px;
+}
+.ivu-page-item-active a {
+  color: #fff;
+}
+.ivu-page-item-active {
+  background-color: #158A7E;
+  color: #fff;
+}
+.ivu-page-prev,
+.ivu-page-next,
+.ivu-page-item-jump-prev,
+.ivu-page-item-jump-next {
+  min-width: 40px;
+  height: 40px;
+  line-height: 38px;
+  background-color: #fff;
+}
+.ivu-spin-fix {
+  background: none;
+}
+.ivu-page {
+  display: inline-block;
+}
+.banner-swiper .ivu-carousel-dots li {
+  margin: 0 3px;
+}
+.banner-swiper .ivu-carousel-dots li button {
+  width: 30px;
+  height: 6px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  opacity: 1;
+}
+.banner-swiper .ivu-carousel-dots li.ivu-carousel-active button {
+  background: #fff;
+}
+.banner-swiper .ivu-carousel-dots-inside {
+  bottom: 16px;
+}

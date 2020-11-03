@@ -1,9 +1,42 @@
 <template>
 	<div>
-		<div class="banner banner-swiper">
-            <div class="static">
-                <img src="../assets/banner/index.png" alt="" />
-            </div>
+		<div class="banner-swiper">
+            <Carousel loop arrow="never" :autoplay-speed="4000">
+                <CarouselItem>
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                </CarouselItem>
+                <CarouselItem>
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                    111
+                    <br />
+                </CarouselItem>
+            </Carousel>
         </div>
         
         <div class="page-conainter">
@@ -117,6 +150,9 @@
                         </div>
                     </div>
                 </div>
+
+                <i class="icon icon-arrow-swiper-left"></i>
+                <i class="icon icon-arrow-swiper-right"></i>
 
                 <div class="home-row">
                     <div class="home-title">
@@ -343,6 +379,10 @@
 	export default {
 		name: 'Index',
 		components: {
-		}
+        },
+        data() {
+            return {
+            }
+        }
 	}
 </script>

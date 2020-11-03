@@ -33,153 +33,38 @@
                     </div>
                 </div>
             </div>
-
-            <div class="base-card-list-large clearfix">
-                <div class="item">
+            <div class="base-card-list-large clearfix page-list-loading">
+                <div class="item" v-for="(item,index) in list" :key="index">
                     <a href="" class="img">
-                        <div class="tag active">
-                            报名中
+                        <div class="tag" :class="{ active: item.status === '报名中' }">
+                            {{ item.status }}
                         </div>
-                        <img src="../../assets/temp/201.png" alt="">
+                        <img :src="item.pictureList[0]" alt="">
                     </a>
                     <div class="wrapper">
                         <div class="title">
-                            <a href="">活动名称活动名称活动名动名称</a>
+                            <a href="">{{ item.name }}</a>
                         </div>
                         
                         <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
+                            报名时间：{{ $dayjs(item.applyStartTime).format('YYYY-MM-DD HH:mm') }} ~ {{ $dayjs(item.applyEndime).format('YYYY-MM-DD HH:mm') }}<br />
+                            地点：{{ item.venueName }}
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <a href="" class="img">
-                        <div class="tag">
-                            已结束
-                        </div>
-                        <img src="../../assets/temp/201.png" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="" class="img">
-                        <div class="tag">
-                            已结束
-                        </div>
-                        <img src="../../assets/temp/201.png" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="" class="img">
-                        <div class="tag">
-                            已结束
-                        </div>
-                        <img src="../../assets/temp/201.png" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="" class="img">
-                        <div class="tag">
-                            已结束
-                        </div>
-                        <img src="../../assets/temp/201.png" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="" class="img">
-                        <div class="tag">
-                            已结束
-                        </div>
-                        <img src="../../assets/temp/201.png" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="" class="img">
-                        <div class="tag">
-                            已结束
-                        </div>
-                        <img src="../../assets/temp/201.png" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <a href="" class="img">
-                        <div class="tag">
-                            已结束
-                        </div>
-                        <img src="../../assets/temp/201.png" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">活动名称活动名称活动名称活动名称活动名称活动名称</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：2020-11-01~2020-11-11  17:00 <br />
-                            地点：文化馆三楼5号会议室
-                        </div>
-                    </div>
-                </div>
+                <Spin size="large" fix v-if="loading"></Spin>
             </div>
+            
+            <div class="page-pager">
+                <Page 
+                    @on-change="pageChange"
+                    :current="pageNum" 
+                    :total="total" 
+                    :pageSize="pageSize" 
+                    :disabled ="loading">
+                </Page>
+            </div>
+            
         </div>
 	</div>
 </template>
@@ -188,6 +73,41 @@
 	export default {
 		name: 'Activity',
 		components: {
-		}
+        },
+        data() {
+            return {
+                pageSize: 9,
+                pageNum: 1,
+                total: 0,
+                loading: false,
+                list: []
+            }
+        },
+        methods: {
+            getList() {
+                this.loading = true
+                this.$http.get(
+                    'api-biz/bizActivity/list',
+                    {
+                        params: {
+                            pageSize: this.pageSize,
+                            pageNum: this.pageNum
+                        }
+                    }
+                )
+                .then(res=>{
+                    this.total = res.total 
+                    this.list = res.rows
+                    this.loading = false
+                })
+            },
+            pageChange(current) {
+                this.pageNum = current
+                this.getList()
+            }
+        },
+        mounted() {
+            this.getList()
+        }
 	}
 </script>

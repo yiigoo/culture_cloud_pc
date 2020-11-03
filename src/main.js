@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueRouter from 'vue-router'
 import Routers from './router.js'
 import ViewUI from 'view-design'
+import '@/styles/iview.css'
 import '@/styles/theme.less'
 import '@/styles/base.less'
 import '@/styles/icon.less'
@@ -13,6 +14,14 @@ Vue.use(VueRouter)
 Vue.use(ViewUI)
 // 设置全局 webComponents
 Vue.use(webComponents)
+
+// http
+import $http from './utils/$http.js'
+Vue.prototype.$http = $http
+
+// format date
+import dayjs from 'dayjs'
+Vue.prototype.$dayjs = dayjs
 
 const router = new VueRouter({
     routes: Routers

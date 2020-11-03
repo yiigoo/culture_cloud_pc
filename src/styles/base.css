@@ -1,5 +1,5 @@
 html {
-  background-color: #eee;
+  background-color: #f2ecdf;
 }
 body {
   color: #000;
@@ -44,6 +44,19 @@ a:hover {
   content: " ";
   clear: both;
   height: 0;
+}
+a.img img,
+.img a img {
+  transition: 0.5s opacity;
+}
+a.img:hover img {
+  opacity: 0.9;
+}
+.img a:hover img {
+  opacity: 0.9;
+}
+.editor p {
+  margin-bottom: 20px;
 }
 .header {
   min-height: 50px;
@@ -98,6 +111,9 @@ a:hover {
   width: 40px;
   text-align: center;
 }
+.header .bar .item.active {
+  background: rgba(0, 0, 0, 0.5);
+}
 .header .bar a {
   display: block;
   line-height: 50px;
@@ -107,18 +123,50 @@ a:hover {
   background: rgba(0, 0, 0, 0.3);
   text-decoration: none;
 }
-.banner {
+.header .bar .item-search {
+  position: relative;
+  z-index: 3;
+}
+.header .bar .item-search .search-box {
+  padding: 13px 20px;
+  width: 360px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.9);
+  position: absolute;
+  top: 50px;
+  right: 0;
+}
+.header .bar .item-search .search-box input {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #999;
+  color: #fff;
+  padding: 0 5px;
+}
+.header .bar .item-search .search-box input:focus {
+  outline: none;
+}
+.banner-swiper {
   margin-top: -50px;
 }
-.banner .static {
-  height: 240px;
-  position: relative;
-  overflow: hidden;
+.banner-swiper .item {
+  height: 540px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
 }
-.banner .static img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+.page-list-loading {
+  position: relative;
+  min-height: 200px;
+}
+.page-banner {
+  margin-top: -50px;
+}
+.page-banner .static {
+  height: 240px;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 .page-conainter {
   width: 1180px;
@@ -287,54 +335,6 @@ a:hover {
 .base-card-list .item:nth-child(4) {
   margin-right: 0;
 }
-.base-card-list.span-3 .tag {
-  background: #999999;
-  padding: 4px 18px;
-  border-radius: 4px 0 4px 0;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #fff;
-}
-.base-card-list.span-3 .tag.active {
-  background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
-  padding: 4px 18px;
-  border-radius: 4px 0 4px 0;
-  font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #fff;
-}
-.base-card-list.span-3 .item {
-  height: 400px;
-  width: 380px;
-  margin-bottom: 20px;
-}
-.base-card-list.span-3 .item:nth-child(3) {
-  margin-right: 0;
-}
-.base-card-list.span-3 .item:nth-child(4) {
-  margin-right: 20px;
-}
-.base-card-list.span-3 .item .img {
-  height: 240px;
-}
-.base-card-list.span-3 .item .img img {
-  line-height: 240px;
-}
-.base-card-list.span-3 .item .title {
-  max-height: 54px;
-  line-height: 27px;
-  overflow: hidden;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-.base-card-list.span-3 .item .sub {
-  font-size: 16px;
-  line-height: 27px;
-}
 .base-card-list-large .item {
   height: 400px;
   width: 380px;
@@ -344,6 +344,7 @@ a:hover {
   background-color: #fff;
   border-radius: 8px;
   transition: 0.4s box-shadow;
+  position: relative;
 }
 .base-card-list-large .item .tag {
   background: #999999;
@@ -354,6 +355,7 @@ a:hover {
   left: 0;
   top: 0;
   color: #fff;
+  z-index: 1;
 }
 .base-card-list-large .item .tag.active {
   background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
@@ -378,7 +380,6 @@ a:hover {
 .base-card-list-large .item .img {
   display: block;
   height: 240px;
-  position: relative;
   text-align: center;
 }
 .base-card-list-large .item .img img {
@@ -977,6 +978,43 @@ a:hover {
   font-weight: bold;
   color: #000;
 }
+.page-tabs-wrapper {
+  background-color: #fff;
+  height: 41px;
+  line-height: 40px;
+  border-bottom: 1px solid #C4C4C4;
+}
+.page-tabs-wrapper .item {
+  float: left;
+  min-width: 80px;
+  padding: 0 5px;
+  margin-right: 20px;
+  color: #666666;
+  font-weight: bold;
+  font-size: 16px;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+.page-tabs-wrapper .item.active {
+  font-weight: bold;
+  color: #000;
+}
+.page-tabs-wrapper .item.active::before {
+  content: ' ';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  right: 0;
+  width: 80px;
+  transform: translateX(-50%);
+  height: 3px;
+  background-color: #F36A1C;
+}
+.page-tabs-wrapper .item:hover {
+  font-weight: bold;
+  color: #000;
+}
 .person-list .item {
   height: 320px;
   width: 280px;
@@ -1257,6 +1295,9 @@ a:hover {
 .figure-list .img img {
   max-width: 100%;
 }
+.figure-list .imgx200 {
+  width: 200px;
+}
 .figure-list .title {
   font-size: 18px;
 }
@@ -1271,6 +1312,99 @@ a:hover {
 .message-list .item .sub {
   margin-top: 5px;
   color: #999;
+}
+.page-other {
+  width: 900px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.page-other .page-other-title {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+  padding: 30px 0;
+}
+.page-other .links-list .item {
+  width: 200px;
+  float: left;
+  padding-bottom: 5px;
+  margin-right: 20px;
+  text-align: center;
+}
+.page-other .links-list .item .img {
+  height: 80px;
+}
+.page-other .links-list .item .img img {
+  line-height: 80px;
+  max-width: 100%;
+  max-height: 80px;
+}
+.page-other .links-list .item .name {
+  margin-top: 8px;
+  font-weight: bold;
+  height: 42px;
+  overflow: hidden;
+  line-height: 21px;
+}
+.page-other .links-list .item:nth-child(4n) {
+  margin-right: 0;
+}
+.page-other .sitemap-list {
+  padding-top: 30px;
+  border-top: 1px solid #C4C4C4;
+}
+.page-other .sitemap-list .item {
+  width: 20%;
+  float: left;
+  padding-bottom: 30px;
+}
+.page-other .sitemap-list .title {
+  font-weight: bold;
+}
+.page-other .sitemap-list ul {
+  margin-top: 7px;
+  padding-right: 15px;
+}
+.page-other .sitemap-list li {
+  margin-bottom: 5px;
+}
+.page-other .sitemap-list li:before {
+  content: " ";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #C4C4C4;
+  border-radius: 50%;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.page-other .contact {
+  padding-top: 30px;
+  border-top: 1px solid #C4C4C4;
+  display: flex;
+}
+.page-other .contact .right {
+  width: 480px;
+}
+.page-other .contact .right img {
+  display: block;
+  font-size: 0;
+  border-radius: 6px;
+}
+.page-other .contact .left {
+  padding-right: 20px;
+  flex: 1;
+}
+.page-other .contact .left .title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.page-other .contact .left .text {
+  margin-bottom: 45px;
+}
+.page-pager {
+  text-align: center;
+  margin-top: 20px;
 }
 .footer {
   background: #5B5B5B;

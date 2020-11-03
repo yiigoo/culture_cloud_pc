@@ -55,18 +55,18 @@
             </div>
             
             <div class="page-content">
-                <div class="news-list">
-                    <div class="item">
+                <div class="news-list page-list-loading">
+                    <div class="item" v-for="(item,index) in list" :key="index">
                         <div class="img">
-                            <img src="../../assets/temp/301.png" alt="">
+                            <a href=""><img :src="item.pictures" alt=""></a>
                         </div>
                         <div class="wrapper">
                             <div class="title">
-                                <a href="">资讯标题资讯标题资讯标题资讯标题资讯标题资讯标题</a>
+                                <a href="">{{ item.title }}</a>
                             </div>
-                            <div class="sub">2020-10-20  叙州文化馆</div>
+                            <div class="sub">{{ $dayjs(item.createTime).format('YYYY-MM-DD') }}  {{ item.venueName }}</div>
                             <div class="content">
-                                资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容。
+                                {{ item.content }}
                             </div>
                             <div class="bar">
                                 <span><i class="icon icon-eye"></i> 201</span>
@@ -74,25 +74,19 @@
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="img">
-                            <img src="../../assets/temp/301.png" alt="">
-                        </div>
-                        <div class="wrapper">
-                            <div class="title">
-                                <a href="">资讯标题资讯标题资讯标题资讯标题资讯标题资讯标题</a>
-                            </div>
-                            <div class="sub">2020-10-20  叙州文化馆</div>
-                            <div class="content">
-                                资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容资讯内容。
-                            </div>
-                            <div class="bar">
-                                <span><i class="icon icon-eye"></i> 201</span>
-                                <a href=""><i class="icon icon-like"></i> 201</a>
-                            </div>
-                        </div>
-                    </div>
+                    <Spin size="large" fix v-if="loading"></Spin>
                 </div>
+
+                <div class="page-pager">
+                    <Page 
+                        @on-change="pageChange"
+                        :current="pageNum" 
+                        :total="total" 
+                        :pageSize="pageSize" 
+                        :disabled ="loading">
+                    </Page>
+                </div>
+
             </div>
         </div>
 	</div>
@@ -100,10 +94,43 @@
 
 <script>
 	export default {
-		name: 'News',
+		name: 'Activity',
 		components: {
         },
+        data() {
+            return {
+                pageSize: 9,
+                pageNum: 1,
+                total: 0,
+                loading: false,
+                list: []
+            }
+        },
+        methods: {
+            getList() {
+                this.loading = true
+                this.$http.get(
+                    'api-sys/sysInformation/list',
+                    {
+                        params: {
+                            pageSize: this.pageSize,
+                            pageNum: this.pageNum
+                        }
+                    }
+                )
+                .then(res=>{
+                    this.total = res.total 
+                    this.list = res.rows
+                    this.loading = false
+                })
+            },
+            pageChange(current) {
+                this.pageNum = current
+                this.getList()
+            }
+        },
         mounted() {
+            this.getList()
         }
 	}
 </script>
