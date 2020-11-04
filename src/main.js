@@ -31,7 +31,14 @@ Vue.prototype.$dayjs = dayjs
 
 router.beforeEach((to, from, next) => {
     ViewUI.LoadingBar.start()
-    next()
+
+    // 路由拦截 登录
+    if( /\/user\/*/.test(to.path)){
+        sessionStorage.token ? next() : next({path: '/news'})
+    }else{
+        next()
+    }
+    
 });
 
 router.afterEach(route => {
