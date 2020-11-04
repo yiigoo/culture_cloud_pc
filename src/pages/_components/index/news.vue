@@ -15,19 +15,7 @@
 				<a href="">更多</a>
 			</div>
 			<div class="list">
-				<div class="item">
-					<div class="title">
-						<a href="">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-					</div>
-					<div class="sub">2020年10月5日</div>
-				</div>
-				<div class="item">
-					<div class="title">
-						<a href="">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
-					</div>
-					<div class="sub">2020年10月5日</div>
-				</div>
-				<div class="item">
+				<div class="item" v-for="item in 3" :key="item">
 					<div class="title">
 						<a href="">新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题新闻标题</a>
 					</div>

@@ -6,7 +6,7 @@
 			</div>
 		</div>
 		<div class="home-swiper">
-			<swiper ref="mySwiper" class="base-card-list" :options="swiperOption">
+			<swiper ref="mySwiper" class="base-card-list pb5" :options="swiperOption">
 				<swiper-slide class="item" v-for="item in 8" :key="item">
 					<a href="" class="img">
 						<img src="../../../assets/temp/101.png" alt="">

@@ -68,7 +68,7 @@ a.img:hover img{
 
 /* margin padding 小间距 */
 .wrap(@n, @i: 1) when (@i =< @n) {
-    @counter: @i * 10;
+    @counter: @i * 5;
     @size: @counter * 1px;
     .ml@{counter} {
         margin-left: @size;
@@ -96,7 +96,7 @@ a.img:hover img{
     }
     .wrap(@n, (@i + 1));
 }
-.wrap(3);
+.wrap(6);
 
 /*宽度*/
 .getwidth(@wn, @wi: 1) when (@wi =< @wn) {
@@ -396,7 +396,6 @@ a.img:hover img{
 
 
 .base-card-list{
-	padding-bottom: 5px;
 	.item{
 		width: 280px;
 		float: left;

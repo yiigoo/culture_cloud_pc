@@ -76,7 +76,7 @@
         },
         data() {
             return {
-                pageSize: 9,
+                pageSize: 5,
                 pageNum: 1,
                 total: 0,
                 loading: false,
