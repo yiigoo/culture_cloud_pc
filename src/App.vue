@@ -12,7 +12,20 @@
 		<br />
 		<br />
 		<br />
-		<Icon type="ios-checkmark" />
+		<CheckboxGroup size="large" :value="'twitter'">
+			<Checkbox label="twitter">
+				<span>Twitter</span>
+			</Checkbox>
+			<Checkbox label="facebook">
+				<span>Facebook</span>
+			</Checkbox>
+			<Checkbox label="github">
+				<span>Github</span>
+			</Checkbox>
+			<Checkbox label="snapchat">
+				<span>Snapchat</span>
+			</Checkbox>
+		</CheckboxGroup>
 		<div class="user-md">
 			<div class="user-content page-content">
 				<!-- <div class="wrapper-box">
@@ -21,7 +34,7 @@
 					</div>
 				</div> -->
 
-				<div class="wrapper-box">
+				<!-- <div class="wrapper-box">
 					<div class="user-title">
 						个人信息
 					</div>
@@ -83,7 +96,7 @@
 						</FormItem>
 					</Form>
 					
-				</div>
+				</div> -->
         	</div>
 		</div>
 		

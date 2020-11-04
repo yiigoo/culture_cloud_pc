@@ -1,0 +1,122 @@
+.ivu-page-item{
+    min-width: 40px;
+    height: 40px;
+    line-height: 38px;
+    font-size: 18px;
+}
+.ivu-page-item-active a{
+    color: #fff;
+}
+.ivu-page-item-active{
+    background-color: #158A7E;
+    color: #fff;
+}
+.ivu-page-prev, .ivu-page-next, .ivu-page-item-jump-prev, .ivu-page-item-jump-next{
+    min-width: 40px;
+    height: 40px;
+    line-height: 38px;
+    background-color: #fff;
+}
+.ivu-spin-fix{
+    background: none;
+}
+.ivu-page{
+    display: inline-block;
+}
+
+.ivu-form {
+    .ivu-form-item-label{
+        color:#666;
+        font-size: 14px;
+    }
+    .ivu-form-item-label{
+        padding-right: 18px;
+    }
+    .ivu-form-item{
+        margin-bottom: 20px;
+    }
+    .ivu-form-item-error{
+        margin-bottom: 30px;
+    }
+}
+.ivu-form-hide-required-mark .ivu-form-item-label:before{
+    content: ''
+}
+.ivu-input{
+    padding: 6px 10px;
+}
+.ivu-input[disabled], fieldset[disabled] .ivu-input{
+    color: #999;
+}
+.ivu-btn{
+    padding: 6px 15px;
+    line-height: 1.6;
+    border-radius: 6px;
+    min-width: 120px;
+    &.ivu-btn-warning{
+        background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
+    }
+}
+.ivu-radio-checked{
+    .ivu-radio-inner{
+        border-color: #F36A1C;
+        border-width: 4px;
+        &::after{
+            opacity: 0;
+        }
+        &:hover{
+            border-color: #F36A1C;
+        }
+    }
+    .ivu-radio-focus{
+        box-shadow: none;
+    }
+    &:hover .ivu-radio-inner{
+        border-color: #F36A1C;
+    }
+}
+.ivu-radio-large .ivu-radio-inner {
+    width: 20px;
+    height: 20px;
+}
+.ivu-checkbox-large .ivu-checkbox-inner {
+    width: 20px;
+    height: 20px;
+}
+.ivu-checkbox{
+    .ivu-checkbox-inner{
+        transition: none;
+        &:hover{
+            border-color: #F36A1C;
+        }
+    }
+    &:hover{
+    }
+    .ivu-checkbox-focus{
+        box-shadow: none;
+        border-color: #F36A1C;
+    }
+}
+.ivu-checkbox-checked{
+    .ivu-checkbox-inner{
+        border: none;
+        border-color: #F36A1C;
+        background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
+        transition: none;
+        &::after{
+            transition: none;
+            top: 4px;
+            left: 7px;
+        }
+        &:hover{
+            border-color: #F36A1C;
+        }
+    }
+    &:hover{
+        border-color: #F36A1C;
+    }
+    .ivu-checkbox-focus{
+        box-shadow: none;
+        border-color: #F36A1C;
+    }
+}
