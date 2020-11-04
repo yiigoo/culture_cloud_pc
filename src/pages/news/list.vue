@@ -2,91 +2,64 @@
 	<div>
         <!-- banner -->
         <page-banner :url="require('../../assets/banner/news.png')"></page-banner>
-        
-        <div class="page-conainter clearfix">
-            <div class="page-aside">
-
-                <div class="page-menu">
-                    <div class="title">
-                        文旅资讯
-                    </div>
-                    <div class="list">
-                        <ul>
-                            <li class="active"><a href="#">最新资讯</a></li>
-                            <li><a href="#">最新资讯2</a></li>
-                            <li><a href="#">最新资讯3</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="aside-widget">
-                    <div class="page-title">
-                        最新活动
-                    </div>
-                    <div class="wrapper list-activity">
-                        <ul>
-                            <li>
-                                <a href="">
-                                    <img src="../../assets/temp/302.png" alt="">
-                                    <div class="title">
-                                        活动标题活动标题活动标题活动标题活动标题活动标题
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../../assets/temp/302.png" alt="">
-                                    <div class="title">
-                                        活动标题活动标题活动标题活动标题活动标题活动标题
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="">
-                                    <img src="../../assets/temp/302.png" alt="">
-                                    <div class="title">
-                                        活动标题活动标题活动标题活动标题活动标题活动标题
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div class="page-conainter">
+            <div class="breadcrumb">
+                <router-link to="/">首页</router-link>
+                <i class="icon icon-arrow-right"></i>
+                <router-link to="">一级目录</router-link>
+                <i class="icon icon-arrow-right"></i>
+                <span>二级目录</span>
             </div>
-            
-            <div class="page-content">
-                <div class="news-list page-list-loading">
-                    <div class="item" v-for="(item,index) in list" :key="index">
-                        <div class="img">
-                            <a href=""><img :src="item.pictures" alt=""></a>
+            <div class="clearfix">
+                <div class="page-aside">
+                    <div class="page-menu">
+                        <div class="title">
+                            文旅资讯
                         </div>
-                        <div class="wrapper">
-                            <div class="title">
-                                <a href="">{{ item.title }}</a>
-                            </div>
-                            <div class="sub">{{ $dayjs(item.createTime).format('YYYY-MM-DD') }}  {{ item.venueName }}</div>
-                            <div class="content">
-                                {{ item.content }}
-                            </div>
-                            <div class="bar">
-                                <span><i class="icon icon-eye"></i> 201</span>
-                                <a href=""><i class="icon icon-like"></i> 201</a>
-                            </div>
+                        <div class="list">
+                            <ul>
+                                <li class="active"><a href="#">最新资讯</a></li>
+                                <li><a href="#">最新资讯2</a></li>
+                            </ul>
                         </div>
                     </div>
-                    <Spin size="large" fix v-if="loading"></Spin>
+                    <widget-activity class="mt20"></widget-activity>
                 </div>
+                
+                <div class="page-content">
+                    <div class="news-list page-list-loading">
+                        <div class="item" v-for="(item,index) in list" :key="index">
+                            <div class="img">
+                                <a href=""><img :src="item.pictures" alt=""></a>
+                            </div>
+                            <div class="wrapper">
+                                <div class="title">
+                                    <a href="">{{ item.title }}</a>
+                                </div>
+                                <div class="sub">{{ $dayjs(item.createTime).format('YYYY-MM-DD') }}  {{ item.venueName }}</div>
+                                <div class="content">
+                                    {{ item.content }}
+                                </div>
+                                <div class="bar">
+                                    <span><i class="icon icon-eye"></i> 201</span>
+                                    <a href=""><i class="icon icon-like"></i> 201</a>
+                                </div>
+                            </div>
+                        </div>
+                        <Spin size="large" fix v-if="loading"></Spin>
+                    </div>
 
-                <div class="page-pager">
-                    <Page 
-                        @on-change="pageChange"
-                        :current="pageNum" 
-                        :total="total" 
-                        :pageSize="pageSize" 
-                        :disabled ="loading">
-                    </Page>
+                    <div class="page-pager">
+                        <Page 
+                            @on-change="pageChange"
+                            :current="pageNum" 
+                            :total="total" 
+                            :pageSize="pageSize" 
+                            :disabled ="loading">
+                        </Page>
+                    </div>
+
                 </div>
-
             </div>
         </div>
 	</div>
@@ -94,7 +67,7 @@
 
 <script>
 	export default {
-		name: 'Activity',
+		name: 'News',
 		components: {
         },
         data() {

@@ -46,9 +46,6 @@ a{
         height: 0;
     }
 }
-.mt20{
-	margin-top: 20px;
-}
 a.img img, .img a img{
 	transition: .5s opacity;
 }
@@ -68,6 +65,50 @@ a.img:hover img{
 @subColor: #4F4F4F;
 @primaryColor: #158A7E;
 @subPrimaryColor: #F36A1C;
+
+/* margin padding 小间距 */
+.wrap(@n, @i: 1) when (@i =< @n) {
+    @counter: @i * 10;
+    @size: @counter * 1px;
+    .ml@{counter} {
+        margin-left: @size;
+    }
+    .mr@{counter} {
+        margin-right: @size;
+    }
+    .mb@{counter} {
+        margin-bottom: @size;
+    }
+    .mt@{counter} {
+        margin-top: @size;
+    }
+    .pl@{counter} {
+        padding-left: @size;
+    }
+    .pr@{counter} {
+        padding-right: @size;
+    }
+    .pb@{counter} {
+        padding-bottom: @size;
+    }
+    .pt@{counter} {
+        padding-top: @size;
+    }
+    .wrap(@n, (@i + 1));
+}
+.wrap(3);
+
+/*宽度*/
+.getwidth(@wn, @wi: 1) when (@wi =< @wn) {
+    @wcounter: @wi * 50;
+    @wsize: @wcounter * 1px;
+    .w@{wcounter}px {
+        width: @wsize
+    }
+    .getwidth(@wn, (@wi + 1));
+}
+.getwidth(10);
+
 
 .header{
 	min-height: 50px;
@@ -641,6 +682,14 @@ a.img:hover img{
 	}
 }
 
+.breadcrumb{
+	color: #333333;
+	padding: 40px 0 30px;
+	.icon{
+		margin: 0 8px;
+	}
+	.text-ellipsis()
+}
 
 .img-avatar{
 	width: 80px;
@@ -726,6 +775,7 @@ a.img:hover img{
 		font-size: 16px;
 		border-bottom: 1px solid #C4C4C4;
 		vertical-align: middle;
+		margin-bottom: 24px;
 		&::before{
 			margin-right: 8px;
 			width: 4px;
@@ -735,6 +785,20 @@ a.img:hover img{
 			display: inline-block;
 			vertical-align: middle;
 		}
+	}
+}
+.form-submit-tips{
+	border-radius: 6px;
+	padding: 7px 23px;
+	line-height: 1.6;
+	display: inline-block;
+	&.fail{
+		color: #FB1818;
+		background: #FFE2E2;
+	}
+	&.success{
+		color: #2DB553;
+		background: #D8F7E0;
 	}
 }
 

@@ -10,6 +10,9 @@
 	export default {
 		name: 'Activity',
 		components: {
+		},
+		mounted() {
+			console.log(this.$route.path)
 		}
 	}
 </script>

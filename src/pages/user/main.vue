@@ -1,10 +1,6 @@
 <template>
 	<div>
-		<div class="banner banner-swiper">
-            <div class="static">
-                <img src="../../assets/banner/user.png" alt="" />
-            </div>
-        </div>
+        <page-banner :url="require('../../assets/banner/user.png')"></page-banner>
         
         <div class="page-conainter page-conainter-inner">
             <div class="user-md clearfix">
@@ -113,6 +109,7 @@
 			}
 		},
         mounted() {
+            console.log(this.$route.path)
             const currentMenu = this.$route.meta.subMenu
             this.menus.forEach(i=>{
                 if (i.to === currentMenu) {
