@@ -26,20 +26,3 @@
 .ivu-page {
   display: inline-block;
 }
-.banner-carousel .ivu-carousel-dots li {
-  margin: 0 3px;
-}
-.banner-carousel .ivu-carousel-dots li button {
-  width: 30px;
-  height: 6px;
-  border-radius: 1px;
-  background: rgba(255, 255, 255, 0.5);
-  border-radius: 3px;
-  opacity: 1;
-}
-.banner-carousel .ivu-carousel-dots li.ivu-carousel-active button {
-  background: #fff;
-}
-.banner-carousel .ivu-carousel-dots-inside {
-  bottom: 16px;
-}

@@ -4,18 +4,26 @@ import VueRouter from 'vue-router'
 import Routers from './router.js'
 import ViewUI from 'view-design'
 import '@/styles/iview.css'
+import '@/styles/swiper.min.css'
 import '@/styles/theme.less'
 import '@/styles/base.less'
 import '@/styles/icon.less'
 
-import webComponents from '@/components/index'
+Vue.use(ViewUI)
+
+// 设置全局 webComponents
+import webComponents from '@/pages/_components/webComponents'
+Vue.use(webComponents)
+
+// swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 Vue.use(VueAwesomeSwiper)
 
+// 路由
 Vue.use(VueRouter)
-Vue.use(ViewUI)
-// 设置全局 webComponents
-Vue.use(webComponents)
+const router = new VueRouter({
+    routes: Routers
+})
 
 // http
 import $http from './utils/$http.js'
@@ -24,10 +32,6 @@ Vue.prototype.$http = $http
 // format date
 import dayjs from 'dayjs'
 Vue.prototype.$dayjs = dayjs
-
-const router = new VueRouter({
-    routes: Routers
-})
 
 router.beforeEach((to, from, next) => {
     ViewUI.LoadingBar.start()
