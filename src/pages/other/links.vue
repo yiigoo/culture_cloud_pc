@@ -3,7 +3,8 @@
 		<div class="page-other">
            <div class="page-other-title">友情链接</div>
            <div class="links-list clearfix">
-                <div class="item">
+
+                <div class="item" v-for="item in 6" :key="item">
                    <div class="img">
                         <a href=""><img src="../../assets/temp/logo.png" alt=""></a>
                    </div>
@@ -11,46 +12,7 @@
                        <a href="">叙述区文化馆</a>
                    </div>
                 </div>
-                <div class="item">
-                    <div class="img">
-                         <a href=""><img src="../../assets/temp/logo.png" alt=""></a>
-                    </div>
-                    <div class="name">
-                        <a href="">叙述区文化馆</a>
-                    </div>
-                 </div>
-                 <div class="item">
-                    <div class="img">
-                         <a href=""><img src="../../assets/temp/logo.png" alt=""></a>
-                    </div>
-                    <div class="name">
-                        <a href="">叙述区文化馆</a>
-                    </div>
-                 </div>
-                 <div class="item">
-                    <div class="img">
-                         <a href=""><img src="../../assets/temp/logo.png" alt=""></a>
-                    </div>
-                    <div class="name">
-                        <a href="">叙述区文化馆</a>
-                    </div>
-                 </div>
-                 <div class="item">
-                    <div class="img">
-                         <a href=""><img src="../../assets/temp/logo.png" alt=""></a>
-                    </div>
-                    <div class="name">
-                        <a href="">叙述区文化馆</a>
-                    </div>
-                 </div>
-                 <div class="item">
-                    <div class="img">
-                         <a href=""><img src="../../assets/temp/logo.png" alt=""></a>
-                    </div>
-                    <div class="name">
-                        <a href="">叙述区文化馆</a>
-                    </div>
-                 </div>
+
            </div>
        </div>
 	</div>
