@@ -58,6 +58,9 @@ fieldset[disabled] .ivu-input {
 .ivu-btn.ivu-btn-warning {
   background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
 }
+.ivu-radio {
+  margin-right: 5px;
+}
 .ivu-radio-checked .ivu-radio-inner {
   border-color: #F36A1C;
   border-width: 4px;
@@ -82,7 +85,14 @@ fieldset[disabled] .ivu-input {
   width: 20px;
   height: 20px;
 }
+.ivu-checkbox {
+  margin-right: 5px;
+  transition: none;
+}
 .ivu-checkbox .ivu-checkbox-inner {
+  transition: none;
+}
+.ivu-checkbox .ivu-checkbox-inner::after {
   transition: none;
 }
 .ivu-checkbox .ivu-checkbox-inner:hover {
@@ -99,12 +109,9 @@ fieldset[disabled] .ivu-input {
   transition: none;
 }
 .ivu-checkbox-checked .ivu-checkbox-inner::after {
-  transition: none;
-  top: 4px;
-  left: 7px;
-}
-.ivu-checkbox-checked .ivu-checkbox-inner:hover {
-  border-color: #F36A1C;
+  transition: none !important;
+  top: 5px;
+  left: 6px !important;
 }
 .ivu-checkbox-checked:hover {
   border-color: #F36A1C;

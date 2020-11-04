@@ -5,10 +5,6 @@ import Routers from './router.js'
 import ViewUI from 'view-design'
 import '@/styles/swiper.min.css'
 import '@/styles/theme.less'
-import '@/styles/coverViewui.less'
-import '@/styles/base.less'
-import '@/styles/icon.less'
-
 Vue.use(ViewUI)
 
 // 设置全局 webComponents

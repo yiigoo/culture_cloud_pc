@@ -16,9 +16,11 @@ module.exports = {
 		"style-resources-loader": {
 			preProcessor: "less",
 			patterns: [
+				path.resolve(__dirname, "./src/styles/theme.less"),
 				path.resolve(__dirname, "./src/styles/base.less"),
 				path.resolve(__dirname, "./src/styles/icon.less"),
-				path.resolve(__dirname, "./src/styles/theme.less")
+				path.resolve(__dirname, "./src/styles/coverViewui.less")
+				
 			]
 		}
 	},

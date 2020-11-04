@@ -1,53 +1,27 @@
 <template>
-	<div class="page-conainter page-conainter-inner">
-		<!-- <page-header>
-		</page-header>
-		<div class="page-body">
-			<router-view>
-			</router-view>
+	<div class="wrapper-box">
+		<div class="user-title">
+			修改密码
 		</div>
-		<page-footer>
-		</page-footer> -->
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<div class="user-md">
-			<div class="user-content page-content">
-				<!-- <div class="wrapper-box">
-					<div class="user-title">
-						个人信息
-					</div>
-				</div> -->
-
-				<div class="wrapper-box">
-					<div class="user-title">
-						修改密码
-					</div>
-					<Form hide-required-mark ref="pageForm" :model="pageForm" :label-width="150" :rules="rules">
-						<FormItem label="原密码" prop="orginPassword">
-							<Input type="password" v-model="pageForm.orginPassword" class="w250px"></Input>
-						</FormItem>
-						<FormItem label="新密码" prop="password">
-							<Input type="password" v-model="pageForm.password" class="w250px"></Input>
-						</FormItem>
-						<FormItem label="确认密码" prop="passwordCheck">
-							<Input type="password" v-model="pageForm.passwordCheck" class="w250px"></Input>
-						</FormItem>
-						<FormItem>
-							<Button type="warning" @click="submit" class="mr30">
-								保存信息
-							</Button>
-							<div class="form-submit-tips success" v-show="success">
-								信息提交并修改成功
-							</div>
-						</FormItem>
-					</Form>
-					
+		<Form hide-required-mark ref="pageForm" :model="pageForm" :label-width="150" :rules="rules">
+			<FormItem label="原密码" prop="orginPassword">
+				<Input type="password" v-model="pageForm.orginPassword" class="w250px"></Input>
+			</FormItem>
+			<FormItem label="新密码" prop="password">
+				<Input type="password" v-model="pageForm.password" class="w250px"></Input>
+			</FormItem>
+			<FormItem label="确认密码" prop="passwordCheck">
+				<Input type="password" v-model="pageForm.passwordCheck" class="w250px"></Input>
+			</FormItem>
+			<FormItem>
+				<Button type="warning" @click="submit" class="mr30">
+					保存信息
+				</Button>
+				<div class="form-submit-tips success" v-show="success">
+					信息提交并修改成功
 				</div>
-        	</div>
-		</div>
+			</FormItem>
+		</Form>
 		
 	</div>
 </template>

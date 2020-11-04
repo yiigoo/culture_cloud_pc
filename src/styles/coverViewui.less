@@ -57,6 +57,9 @@
         background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
     }
 }
+.ivu-radio{
+    margin-right: 5px;
+}
 .ivu-radio-checked{
     .ivu-radio-inner{
         border-color: #F36A1C;
@@ -84,13 +87,16 @@
     height: 20px;
 }
 .ivu-checkbox{
+    margin-right: 5px;
+    transition: none;
     .ivu-checkbox-inner{
         transition: none;
+        &::after{
+            transition: none;
+        }
         &:hover{
             border-color: #F36A1C;
         }
-    }
-    &:hover{
     }
     .ivu-checkbox-focus{
         box-shadow: none;
@@ -104,12 +110,9 @@
         background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
         transition: none;
         &::after{
-            transition: none;
-            top: 4px;
-            left: 7px;
-        }
-        &:hover{
-            border-color: #F36A1C;
+            transition: none !important;
+            top: 5px;
+            left: 6px !important;
         }
     }
     &:hover{

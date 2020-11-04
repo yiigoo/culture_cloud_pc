@@ -1,25 +1,23 @@
 <template>
 	<div>
         <div class="user-content page-content">
-            <div class="wrapper-box">
-                <div class="user-title">
-                    个人信息
-                </div>
-            </div>
-
-            <div class="wrapper-box">
-                <div class="user-title">
-                    修改密码
-                </div>
-            </div>
+            <info></info>
+            <password></password>
         </div>
 	</div>
 </template>
 
 <script>
+import '@/styles/coverViewui.less'
+import '@/styles/base.less'
+import '@/styles/icon.less'
+    import info from './_components/info'
+    import password from './_components/password'
 	export default {
 		name: 'Account',
 		components: {
+            info,
+            password
         },
         
 	}
