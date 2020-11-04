@@ -45,6 +45,9 @@ a:hover {
   clear: both;
   height: 0;
 }
+.mt20 {
+  margin-top: 20px;
+}
 a.img img,
 .img a img {
   transition: 0.5s opacity;

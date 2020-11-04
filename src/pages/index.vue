@@ -1,7 +1,6 @@
 <template>
     <div>
         <banner></banner>
-        
         <div class="page-conainter">
             <div class="home-md">
 

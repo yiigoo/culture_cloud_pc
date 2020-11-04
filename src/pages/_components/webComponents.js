@@ -1,7 +1,11 @@
 import pageBanner from './pageBanner'
+import widgetActivity from './widgetActivity'
+import widgetNews from './widgetNews'
 
 const components = {
-    pageBanner
+    pageBanner,
+    widgetActivity,
+    widgetNews
 };
 
 const webComponents = {
