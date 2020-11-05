@@ -2,7 +2,7 @@
 	<div>
         <page-banner :url="require('../../assets/banner/user.png')"></page-banner>
         
-        <div class="page-conainter page-conainter-inner">
+        <div class="page-conainter">
             <div class="user-md clearfix">
                 <div class="user-menu page-aside">
                     <div class="top">

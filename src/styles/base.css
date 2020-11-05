@@ -382,8 +382,12 @@ a.img:hover img {
   margin: 0 auto;
 }
 .page-conainter-inner {
-  margin-top: -65px;
   position: relative;
+  margin: 0 auto;
+  margin-top: -65px;
+  width: 900px;
+  background: #FFFFFF;
+  border-radius: 8px;
 }
 .page-body {
   padding-bottom: 50px;
@@ -812,6 +816,9 @@ a.img:hover img {
   height: 80px;
   border-radius: 40px;
 }
+.user-md {
+  margin-top: -65px;
+}
 .user-md .user-menu {
   background: #FFFFFF;
   border-radius: 8px;
@@ -914,11 +921,7 @@ a.img:hover img {
   background: #D8F7E0;
 }
 .login-md {
-  width: 900px;
   height: 422px;
-  margin: 0 auto;
-  background: #FFFFFF;
-  border-radius: 8px;
   display: flex;
 }
 .login-md .left {
@@ -1692,11 +1695,7 @@ a.img:hover img {
   margin-bottom: 45px;
 }
 .register-md {
-  width: 900px;
   padding: 40px 0;
-  margin: 0 auto;
-  background-color: #fff;
-  border-radius: 8px;
 }
 .register-md .title {
   text-align: center;
