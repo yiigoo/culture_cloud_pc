@@ -67,8 +67,7 @@
 </template>
 
 <script>
-	import areas from './area.js'
-	import areaSelector from './areaSelector'
+	import areaSelector from '../areaSelector'
 	export default {
 		components: {
 			areaSelector

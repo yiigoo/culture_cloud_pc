@@ -11,8 +11,8 @@
 import '@/styles/coverViewui.less'
 import '@/styles/base.less'
 import '@/styles/icon.less'
-    import info from './_components/info'
-    import password from './_components/password'
+    import info from './_components/account/info'
+    import password from './_components/account/password'
 	export default {
 		name: 'Account',
 		components: {

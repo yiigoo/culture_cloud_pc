@@ -34,7 +34,7 @@ router.beforeEach((to, from, next) => {
 
     // 路由拦截 登录
     if( /\/user\/*/.test(to.path)){
-        sessionStorage.token ? next() : next({path: '/news'})
+        sessionStorage.token ? next() : next({path: '/login'})
     }else{
         next()
     }

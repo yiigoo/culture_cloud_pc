@@ -838,9 +838,25 @@ a.img:hover img{
 	border-radius: 8px;
 	display: flex;
 	.left{
+		.code{
+			display: block;
+			font-size: 0;
+			width: 112px;
+			height: 36px;
+		}
+		.text-right{
+			text-align: right;
+		}
+		.tips{
+			color: #999;
+			a{
+				color: #999;
+			}
+		}
 		padding: 35px 50px;
 		flex: 1;
 		.tabs{
+			margin-bottom: 20px;
 			a{
 				color: @primaryColor;
 				margin-right: 20px;
@@ -848,8 +864,16 @@ a.img:hover img{
 			.active{
 				font-weight: bold;
 				font-size: 18px;
+				cursor: default;
+				&:hover{
+					text-decoration: none;
+				}
 			}
 		}
+	}
+	.qrcode{
+		padding-top: 20px;
+		text-align: center;
 	}
 	.right{
 		width: 530px;

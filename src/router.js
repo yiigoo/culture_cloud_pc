@@ -64,6 +64,20 @@ const routes = [
 		component: resolve => { require(['./pages/volunteer/list.vue'], resolve)}
 	},
 	{
+		path: '/login',
+		meta: {
+			menu: '/login'
+		},
+		component: resolve => { require(['./pages/user/login.vue'], resolve)}
+	},
+	{
+		path: '/register',
+		meta: {
+			menu: '/register'
+		},
+		component: resolve => { require(['./pages/user/register.vue'], resolve)}
+	},
+	{
 		path: '/user',
 		redirect: '/user/account',
 		meta: {

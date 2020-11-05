@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="item">
-					<router-link to="user"><i class="icon icon-user"></i></router-link>
+					<router-link to="/user"><i class="icon icon-user"></i></router-link>
                 </div>
             </div>
         </div>
