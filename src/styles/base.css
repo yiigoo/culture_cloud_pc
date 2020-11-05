@@ -1691,6 +1691,65 @@ a.img:hover img {
 .page-other .contact .left .text {
   margin-bottom: 45px;
 }
+.register-md {
+  width: 900px;
+  padding: 40px 0;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.register-md .title {
+  text-align: center;
+  color: #999;
+}
+.register-md .title .inner {
+  font-weight: bold;
+  font-size: 24px;
+}
+.register-md .title .sub {
+  font-size: 12px;
+}
+.register-md .wrapper {
+  padding-top: 30px;
+  width: 350px;
+  margin: 0 auto;
+}
+.global-opt-tips {
+  width: 900px;
+  padding: 40px 0;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 8px;
+  text-align: center;
+}
+.global-opt-tips .icon {
+  margin: 40px 0 30px;
+}
+.global-opt-tips .wrapper {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+}
+.global-opt-tips .wrapper .top {
+  font-weight: bold;
+  font-size: 18px;
+  width: 230px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+.global-opt-tips .wrapper .top-success {
+  color: #2DB553;
+}
+.global-opt-tips .wrapper .top-fail {
+  color: #FB1818;
+}
+.global-opt-tips .wrapper .bottom {
+  padding-top: 30px;
+  border-top: 1px solid #DDDDDD;
+}
+.global-opt-tips .wrapper .bottom button {
+  margin: 0 20px;
+}
 .page-pager {
   text-align: center;
   margin-top: 20px;

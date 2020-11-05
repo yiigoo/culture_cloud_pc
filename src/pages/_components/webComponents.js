@@ -1,11 +1,13 @@
 import pageBanner from './pageBanner'
 import widgetActivity from './widgetActivity'
 import widgetNews from './widgetNews'
+import operateTips from './operateTips'
 
 const components = {
     pageBanner,
     widgetActivity,
-    widgetNews
+    widgetNews,
+    operateTips
 };
 
 const webComponents = {
