@@ -203,6 +203,54 @@ a.img:hover img {
 .pt30 {
   padding-top: 30px;
 }
+.ml35 {
+  margin-left: 35px;
+}
+.mr35 {
+  margin-right: 35px;
+}
+.mb35 {
+  margin-bottom: 35px;
+}
+.mt35 {
+  margin-top: 35px;
+}
+.pl35 {
+  padding-left: 35px;
+}
+.pr35 {
+  padding-right: 35px;
+}
+.pb35 {
+  padding-bottom: 35px;
+}
+.pt35 {
+  padding-top: 35px;
+}
+.ml40 {
+  margin-left: 40px;
+}
+.mr40 {
+  margin-right: 40px;
+}
+.mb40 {
+  margin-bottom: 40px;
+}
+.mt40 {
+  margin-top: 40px;
+}
+.pl40 {
+  padding-left: 40px;
+}
+.pr40 {
+  padding-right: 40px;
+}
+.pb40 {
+  padding-bottom: 40px;
+}
+.pt40 {
+  padding-top: 40px;
+}
 /*宽度*/
 .w50px {
   width: 50px;
@@ -392,17 +440,6 @@ a.img:hover img {
 .page-body {
   padding-bottom: 50px;
 }
-.home-md .home-title {
-  width: 304px;
-  height: 39px;
-  background: url('../assets/home-decorate-title.png') no-repeat center center;
-  margin: 0 auto;
-  text-align: center;
-  margin-bottom: 24px;
-}
-.home-md .home-title .font-title {
-  margin: 0 auto;
-}
 .home-md .home-row {
   margin-top: 50px;
 }
@@ -487,58 +524,101 @@ a.img:hover img {
 .home-md .home-guide-md .list li a:hover {
   box-shadow: 1px 1px 5px #158A7E;
 }
+.home-title {
+  width: 304px;
+  height: 39px;
+  background: url('../assets/home-decorate-title.png') no-repeat center center;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 24px;
+}
+.home-title .font-title {
+  margin: 0 auto;
+}
 .font-title {
   width: 128px;
   height: 39px;
   font-size: 0;
   text-indent: 10000px;
+}
+.font-title .bg {
   background-position: center center;
   background-repeat: no-repeat;
 }
 .font-title-news {
   background: url('../assets/font-news.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-activity {
   background: url('../assets/font-activity.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-works {
   background: url('../assets/font-works.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-team {
   background: url('../assets/font-team.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-brand {
   background: url('../assets/font-brand.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-server {
   background: url('../assets/font-server.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-brand-index-1 {
   background: url('../assets/font-brand-index-1.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-brand-index-2 {
   background: url('../assets/font-brand-index-2.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-brand-index-3 {
   background: url('../assets/font-brand-index-3.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-map {
   background: url('../assets/font-map.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-artist {
   background: url('../assets/font-artist.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-volunteer-activity {
   background: url('../assets/font-volunteer-activity.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-volunteer-mien {
   background: url('../assets/font-volunteer-mien.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-star-team {
   background: url('../assets/font-star-team.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .font-title-train {
   background: url('../assets/font-train.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .base-card-list .item {
   width: 280px;
@@ -1849,7 +1929,7 @@ a.img:hover img {
 }
 .service-map-index .service-map {
   height: 500px;
-  width: 308px;
+  width: 310px;
   background: #AFA48E;
   padding-bottom: 15px;
 }
@@ -1869,7 +1949,7 @@ a.img:hover img {
   min-height: 70px;
   color: #fff;
   display: flex;
-  padding: 4px 20px 4px 16px;
+  padding: 6px 20px 6px 16px;
   transition: 0.4s background-color;
 }
 .service-map-index .service-map .list a:hover {
@@ -1916,12 +1996,12 @@ a.img:hover img {
   padding: 5px 0;
 }
 .service-map-index .map-show {
-  width: 680px;
+  width: 870px;
   height: 500px;
   position: relative;
 }
 .service-map-index .map-show .temp {
-  width: 680px;
+  width: 870px;
   height: 500px;
 }
 .service-map-index .map-show .layer {

@@ -96,7 +96,7 @@ a.img:hover img{
     }
     .wrap(@n, (@i + 1));
 }
-.wrap(6);
+.wrap(8);
 
 /*宽度*/
 .getwidth(@wn, @wi: 1) when (@wi =< @wn) {
@@ -275,17 +275,6 @@ a.img:hover img{
 }
 
 .home-md{
-	.home-title{
-		width: 304px;
-		height: 39px;
-		background: url('@{images}/home-decorate-title.png') no-repeat center center;
-		margin: 0 auto;
-		text-align: center;
-		.font-title{
-			margin: 0 auto;
-		}
-		margin-bottom: 24px;
-	}
 	.home-row{
 		margin-top: 50px;
 	}
@@ -372,57 +361,86 @@ a.img:hover img{
 	}
 }
 
+.home-title{
+	width: 304px;
+	height: 39px;
+	background: url('@{images}/home-decorate-title.png') no-repeat center center;
+	margin: 0 auto;
+	text-align: center;
+	.font-title{
+		margin: 0 auto;
+	}
+	margin-bottom: 24px;
+}
+
 .font-title{
+	.bg{
+		background-position: center center;
+		background-repeat: no-repeat;
+	}
 	width: 128px;
 	height: 39px;
 	font-size: 0;
 	text-indent: 10000px;
-	background-position: center center;
-	background-repeat: no-repeat;
 	&-news{
 		background: url('@{images}/font-news.svg');
+		.bg();
 	}
 	&-activity{
 		background: url('@{images}/font-activity.svg');
+		.bg();
 	}
 	&-works{
 		background: url('@{images}/font-works.svg');
+		.bg();
 	}
 	&-team{
 		background: url('@{images}/font-team.svg');
+		.bg();
 	}
 	&-brand{
 		background: url('@{images}/font-brand.svg');
+		.bg();
 	}
 	&-server{
 		background: url('@{images}/font-server.svg');
+		.bg();
 	}
 	&-brand-index-1{
 		background: url('@{images}/font-brand-index-1.svg');
+		.bg();
 	}
 	&-brand-index-2{
 		background: url('@{images}/font-brand-index-2.svg');
+		.bg();
 	}
 	&-brand-index-3{
 		background: url('@{images}/font-brand-index-3.svg');
+		.bg();
 	}
 	&-map{
 		background: url('@{images}/font-map.svg');
+		.bg();
 	}
 	&-artist{
 		background: url('@{images}/font-artist.svg');
+		.bg();
 	}
 	&-volunteer-activity{
 		background: url('@{images}/font-volunteer-activity.svg');
+		.bg();
 	}
 	&-volunteer-mien{
 		background: url('@{images}/font-volunteer-mien.svg');
+		.bg();
 	}
 	&-star-team{
 		background: url('@{images}/font-star-team.svg');
+		.bg();
 	}
 	&-train{
 		background: url('@{images}/font-train.svg');
+		.bg();
 	}
 }
 
@@ -1815,7 +1833,7 @@ a.img:hover img{
 	display: flex;
 	.service-map{
 		height: 500px;
-		width: 308px;
+		width: 310px;
 		background: #AFA48E;
 		padding-bottom: 15px;
 		.title{
@@ -1835,7 +1853,7 @@ a.img:hover img{
 				min-height: 70px;
 				color: #fff;
 				display: flex;
-				padding: 4px 20px 4px 16px;
+				padding: 6px 20px 6px 16px;
 				transition: .4s background-color;
 				&:hover{
 					background: rgba(0, 0, 0, 0.1);
@@ -1883,11 +1901,11 @@ a.img:hover img{
 		}
 	}
 	.map-show{
-		width: 680px;
+		width: 870px;
 		height: 500px;
 		position: relative;
 		.temp{
-			width: 680px;
+			width: 870px;
 			height: 500px;
 		}
 		.layer{

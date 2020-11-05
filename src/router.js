@@ -40,14 +40,29 @@ const routes = [
 		meta: {
 			menu: '/brand'
 		},
-		component: resolve => { require(['./pages/brand/list.vue'], resolve)}
+		component: resolve => { require(['./pages/brand/index.vue'], resolve)},
 	},
+	{
+		path:'/brand/list',
+		meta: {
+			menu: '/brand',
+		},
+		component:resolve => { require(['./pages/brand/list.vue'], resolve)}
+	},
+	{
+		path:'/brand/detail',
+		meta: {
+			menu: '/brand',
+		},
+		component:resolve => { require(['./pages/brand/detail.vue'], resolve)}
+	},
+
 	{
 		path: '/culture-service',
 		meta: {
 			menu: '/culture-service'
 		},
-		component: resolve => { require(['./pages/cultureService/list.vue'], resolve)}
+		component: resolve => { require(['./pages/cultureService/index.vue'], resolve)}
 	},
 	{
 		path: '/art-team',
