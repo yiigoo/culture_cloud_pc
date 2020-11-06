@@ -33,37 +33,31 @@
                     </div>
                 </div>
             </div>
-            <div class="base-card-list-large clearfix page-list-loading">
-                <div class="item" v-for="(item,index) in list" :key="index">
-                    <a href="" class="img">
-                        <div class="tag" :class="{ active: item.status === '报名中' }">
-                            {{ item.status }}
-                        </div>
-                        <img :src="item.pictureList[0]" alt="">
-                    </a>
-                    <div class="wrapper">
-                        <div class="title">
-                            <a href="">{{ item.name }}</a>
-                        </div>
-                        
-                        <div class="sub">
-                            报名时间：{{ $dayjs(item.applyStartTime).format('YYYY-MM-DD HH:mm') }} ~ {{ $dayjs(item.applyEndime).format('YYYY-MM-DD HH:mm') }}<br />
-                            地点：{{ item.venueName }}
+            <!-- request 接口 ， slotProps.rows = data.rows , pageSize 每页个数 -->
+            <pager-rows request="api-sys/sysInformation/list" :pageSize="9">
+                <template v-slot="slotProps">
+                    <div class="base-card-list-large clearfix">
+                        <div class="item" v-for="(item,index) in slotProps.rows" :key="index">
+                            <a href="" class="img">
+                                <div class="tag" :class="{ active: item.status === '报名中' }">
+                                    {{ item.status }}
+                                </div>
+                                <img :src="item.pictures" alt="">
+                            </a>
+                            <div class="wrapper">
+                                <div class="title">
+                                    <a href="">{{ item.name }}</a>
+                                </div>
+                                
+                                <div class="sub">
+                                    报名时间：{{ $dayjs(item.applyStartTime).format('YYYY-MM-DD HH:mm') }} ~ {{ $dayjs(item.applyEndime).format('YYYY-MM-DD HH:mm') }}<br />
+                                    地点：{{ item.venueName }}
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <Spin size="large" fix v-if="loading"></Spin>
-            </div>
-            
-            <div class="page-pager">
-                <Page 
-                    @on-change="pageChange"
-                    :current="pageNum" 
-                    :total="total" 
-                    :pageSize="pageSize" 
-                    :disabled ="loading">
-                </Page>
-            </div>
+                </template>
+            </pager-rows>
             
         </div>
 	</div>
@@ -76,38 +70,7 @@
         },
         data() {
             return {
-                pageSize: 5,
-                pageNum: 1,
-                total: 0,
-                loading: false,
-                list: []
             }
-        },
-        methods: {
-            getList() {
-                this.loading = true
-                this.$http.get(
-                    'api-biz/bizActivity/list',
-                    {
-                        params: {
-                            pageSize: this.pageSize,
-                            pageNum: this.pageNum
-                        }
-                    }
-                )
-                .then(res=>{
-                    this.total = res.total 
-                    this.list = res.rows
-                    this.loading = false
-                })
-            },
-            pageChange(current) {
-                this.pageNum = current
-                this.getList()
-            }
-        },
-        mounted() {
-            this.getList()
         }
 	}
 </script>

@@ -11,6 +11,10 @@
   background-color: #158A7E;
   color: #fff;
 }
+.ivu-page-item-active a,
+.ivu-page-item-active:hover a {
+  color: #fff;
+}
 .ivu-page-prev,
 .ivu-page-next,
 .ivu-page-item-jump-prev,
@@ -21,7 +25,8 @@
   background-color: #fff;
 }
 .ivu-spin-fix {
-  background: none;
+  background: #fff;
+  opacity: 0.2;
 }
 .ivu-page {
   display: inline-block;

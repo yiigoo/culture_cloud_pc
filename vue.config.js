@@ -3,7 +3,7 @@ module.exports = {
 	devServer: {
 		proxy: {
 			'/*': {
-				target: 'http://biubiu.vicp.io:25394/',
+				target: 'http://47.108.79.12/',
 				ws: true,
 				changeOrigin: true
 			}

@@ -2,12 +2,14 @@ import pageBanner from './pageBanner'
 import widgetActivity from './widgetActivity'
 import widgetNews from './widgetNews'
 import operateTips from './operateTips'
+import pagerRows from './pagerRows'
 
 const components = {
     pageBanner,
     widgetActivity,
     widgetNews,
-    operateTips
+    operateTips,
+    pagerRows
 };
 
 const webComponents = {
