@@ -1955,6 +1955,74 @@ a.img:hover img{
 	}
 }
 
+.heritage-show{
+	.box{
+		.right{
+			.item{
+				width: 280px;
+				overflow: hidden;
+				a{
+					display: block;
+					height: 215px;
+					position: relative;
+					color: #fff;
+					.shadow{
+						background-color: rgba(5, 5, 5, 0.5);
+						position: absolute;
+						left: 0;
+						right: 0;
+						top: 0;
+						bottom: 0;
+						z-index: 0;
+						opacity: 0;
+						transition: .3s opacity;
+					}
+					&:hover{
+						.shadow{
+							opacity: 1;
+						}
+						.text{
+							display: block;
+						}
+					}
+					.text{
+						position: absolute;
+						top: 50%;
+						transform: translateY(-50%);
+						left: 42px;
+						right: 42px;
+						display: none;
+						text-align: center;
+						.title{
+							font-weight: bold;
+							font-size: 18px;
+							margin-bottom: 5px;
+						}
+					}
+					
+				}
+				img{
+					width: 100%;
+					line-height: 215px;
+				}
+			}
+		}
+	}
+	.more{
+		display: block;
+		margin: 0 auto;
+		border: 1px solid #999999;
+		box-sizing: border-box;
+		border-radius: 20px;
+		height: 40px;
+		line-height: 38px;
+		width: 200px;
+		font-size: 16px;
+		color: #999;
+		text-align: center;
+	}
+}
+
 .footer{
 	background: #5B5B5B;
 	text-align: center;
