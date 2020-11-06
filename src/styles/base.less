@@ -56,6 +56,17 @@ a.img:hover img{
 	opacity: .9;
 }
 
+.box-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	img{
+		max-height: 100%;
+		max-width: 100%;
+	}
+}
+
 .editor{
 	p{
 		margin-bottom: 20px;
@@ -448,7 +459,8 @@ a.img:hover img{
 .base-card-list{
 	.item{
 		width: 280px;
-		float: left;
+		display: inline-flex;
+    	flex-wrap: wrap;
 		margin-right: 20px;
 		background-color: #fff;
 		border-radius: 8px;
@@ -462,15 +474,11 @@ a.img:hover img{
 			overflow: hidden;
 		}
 		.img{
-			display: block;
+			.box-img();
 			height: 210px;
 			position: relative;
 			img{
 				border-radius: 8px 8px 0px 0px;
-				font-size: 0;
-				max-width: 100%;
-				max-height: 100%;
-				line-height: 210px;
 			}
 		}
 		.sub{
@@ -487,10 +495,10 @@ a.img:hover img{
 }
 
 .base-card-list-large{
+	display: inline-flex;
+    flex-wrap: wrap;
 	.item{
-		height: 400px;
 		width: 380px;
-		float: left;
 		margin-right: 20px;
 		margin-bottom: 20px;
 		background-color: #fff;
@@ -507,6 +515,7 @@ a.img:hover img{
 			top: 0;
 			color: #fff;
 			z-index: 1;
+			line-height: 1.6;
 		}
 		.tag.active{
 			background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
@@ -522,22 +531,18 @@ a.img:hover img{
 			padding: 12px 16px 28px;
 		}
 		.title{
-			max-height: 54px;
-			line-height: 27px;
-			overflow: hidden;
+			line-height: 25px;
 			font-size: 18px;
 			margin-bottom: 10px;
 		}
 		.img{
-			display: block;
+			.box-img();
 			height: 240px;
-			text-align: center;
 			img{
 				border-radius: 8px 8px 0px 0px;
-				font-size: 0;
-				max-width: 100%;
-				height: 240px;
-				line-height: 240px;
+			}
+			&.height285{
+				height: 285px;
 			}
 		}
 		.sub{
@@ -634,9 +639,8 @@ a.img:hover img{
 		}
 		.img{
 			height: 120px;
+			.box-img();
 			img{
-				max-width: 100%;
-				height: 120px;
 				border-radius: 8px;
 			}
 		}

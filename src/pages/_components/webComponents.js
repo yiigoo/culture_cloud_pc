@@ -3,13 +3,15 @@ import widgetActivity from './widgetActivity'
 import widgetNews from './widgetNews'
 import operateTips from './operateTips'
 import pagerRows from './pagerRows'
+import searchTypes from './searchTypes'
 
 const components = {
     pageBanner,
     widgetActivity,
     widgetNews,
     operateTips,
-    pagerRows
+    pagerRows,
+    searchTypes
 };
 
 const webComponents = {

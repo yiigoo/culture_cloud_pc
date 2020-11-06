@@ -4,37 +4,25 @@
         <page-banner :url="require('../../assets/banner/activity.png')"></page-banner>
         
         <div class="page-conainter">
+
+            <div class="breadcrumb">
+                <router-link to="/">首页</router-link>
+                <i class="icon icon-arrow-right"></i>
+                <router-link to="">一级目录</router-link>
+                <i class="icon icon-arrow-right"></i>
+                <span>二级目录</span>
+            </div>
+            
             <div class="search-catalogue-md">
-                <div class="item">
-                    <div class="label">选择类型：</div>
-                    <div class="value">
-                        <a href="" class="active">全部</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="label">选择状态：</div>
-                    <div class="value">
-                        <a href="" class="active">全部</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                        <a href="">文字内容</a>
-                    </div>
-                </div>
+                <search-types :types="types" @on-change="type1Change">
+                    选择类型：
+                </search-types>
+                <search-types :types="types" @on-change="type2Change">
+                    选择状态：
+                </search-types>
             </div>
             <!-- request 接口 ， slotProps.rows = data.rows , pageSize 每页个数 -->
-            <pager-rows request="api-sys/sysInformation/list" :pageSize="9">
+            <pager-rows ref="rows" request="api-biz/bizActivity/list" :pageSize="9" :params="params">
                 <template v-slot="slotProps">
                     <div class="base-card-list-large clearfix">
                         <div class="item" v-for="(item,index) in slotProps.rows" :key="index">
@@ -66,10 +54,28 @@
 <script>
 	export default {
 		name: 'Activity',
-		components: {
-        },
+		components: {},
         data() {
             return {
+                types: [
+                    { value: 'all' , label: '全部' },
+                    { value: '1' , label: '类型1' },
+                    { value: '2' , label: '类型2' }
+                ],
+                params: {
+                    type1: 'all',
+                    type2: 'all'
+                } // 搜索参数
+            }
+        },
+        methods: {
+            type1Change(value) {
+                this.params.type1 = value
+                this.$refs['rows'].reload()
+            },
+            type2Change(value) {
+                this.params.type2 = value
+                 this.$refs['rows'].reload()
             }
         }
 	}

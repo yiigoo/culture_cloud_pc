@@ -3,6 +3,7 @@
         <!-- banner -->
         <page-banner :url="require('../../assets/banner/news.png')"></page-banner>
         <div class="page-conainter">
+
             <div class="breadcrumb">
                 <router-link to="/">首页</router-link>
                 <i class="icon icon-arrow-right"></i>
@@ -10,6 +11,7 @@
                 <i class="icon icon-arrow-right"></i>
                 <span>二级目录</span>
             </div>
+            
             <div class="clearfix">
                 <div class="page-aside">
                     <div class="page-menu">
@@ -32,11 +34,14 @@
                             <div class="news-list page-list-loading">
                                 <div class="item" v-for="(item,index) in slotProps.rows" :key="index">
                                     <div class="img">
-                                        <a href=""><img :src="item.pictures" alt=""></a>
+                                        <router-link :to="`/news/detail?id=${item.id}`">
+                                            <img :src="item.pictures" alt="">
+                                        </router-link>
+                                       
                                     </div>
                                     <div class="wrapper">
                                         <div class="title">
-                                            <a href="">{{ item.title }}</a>
+                                            <router-link :to="`/news/detail?id=${item.id}`">{{ item.title }}</router-link>
                                         </div>
                                         <div class="sub">{{ $dayjs(item.createTime).format('YYYY-MM-DD') }}  {{ item.venueName }}</div>
                                         <div class="content">
