@@ -1,7 +1,7 @@
 <template>
 	<div>
         <!-- banner -->
-        <page-banner :url="require('../../assets/banner/news.png')"></page-banner>
+        <page-banner :url="require('../../assets/banner/banner-brand.png')"></page-banner>
 		<div class="page-container">
 
             <div class="breadcrumb">
@@ -11,28 +11,21 @@
                 <i class="icon icon-arrow-right"></i>
                 <span>二级目录</span>
             </div>
-
-			<div class="brand-list clearfix page-list-loading">
-                <div class="item" v-for="item in 9" :key="item">
-                    <router-link :to="`/brand/detail?id=${item}`">
-                        <img src="../../assets/temp/501.png" alt="">
-                        <div class="title">
-                            品牌名称品牌名称品牌名称品牌名称品牌
-                        </div>
-                        <div class="shadow"></div>
-                    </router-link>
-                </div>
-				<Spin size="large" fix v-if="loading"></Spin>
-            </div>
-
-			 <div class="page-pager">
-				<Page 
-					:current="1" 
-					:total="90" 
-					:pageSize="9" 
-					:disabled ="loading">
-				</Page>
-			</div>
+			<pager-rows ref="rows" request="" :pageSize="9" :params="params">
+                <template v-slot="slotProps">
+					<div class="brand-list clearfix page-list-loading">
+						<div class="item" v-for="item in 9" :key="item">
+							<router-link :to="`/brand/detail?id=${item}`">
+								<img src="../../assets/temp/501.png" alt="">
+								<div class="title">
+									品牌名称品牌名称品牌名称品牌名称品牌
+								</div>
+								<div class="shadow"></div>
+							</router-link>
+						</div>
+					</div>
+                </template>
+			</pager-rows>
 		</div>
 	</div>
 </template>
@@ -44,7 +37,6 @@
 		},
 		data() {
 			return {
-				loading: false
 			}
 		},
         mounted() {

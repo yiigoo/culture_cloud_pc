@@ -1,7 +1,7 @@
 <template>
 	<div>
         <!-- banner -->
-        <page-banner :url="require('../../assets/banner/news.png')"></page-banner>
+        <page-banner :url="require('../../assets/banner/banner-news.png')"></page-banner>
         <div class="page-container">
 
             <div class="breadcrumb">

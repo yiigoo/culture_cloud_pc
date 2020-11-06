@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- banner -->
-        <page-banner :url="require('../../assets/banner/activity.png')"></page-banner>
+        <page-banner :url="require('../../assets/banner/banner-venue.png')"></page-banner>
         <div class="page-container">
 
             <div class="breadcrumb">
@@ -43,18 +43,8 @@
                 </div>
                 <div class="right-md pull-right page-swiper">
                     <swiper ref="mySwiper" :options="swiperOption">
-                        <swiper-slide>
+                        <swiper-slide v-for="item in 3" :key="item">
                             <div class="item">
-                                <img src="../../assets/temp/801.png" alt="">
-                            </div>
-                        </swiper-slide>
-                        <swiper-slide>
-                             <div class="item">
-                                <img src="../../assets/temp/801.png" alt="">
-                            </div>
-                        </swiper-slide>
-                        <swiper-slide>
-                             <div class="item">
                                 <img src="../../assets/temp/801.png" alt="">
                             </div>
                         </swiper-slide>

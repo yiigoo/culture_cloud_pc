@@ -1,7 +1,7 @@
 <template>
     <div>
         <!-- banner -->
-        <page-banner :url="require('../../assets/banner/activity.png')"></page-banner>
+        <page-banner :url="require('../../assets/banner/banner-activity.png')"></page-banner>
         <div class="page-container">
 
             <div class="breadcrumb">
@@ -90,11 +90,11 @@
                         </div>
                     </div>
                     <share-bar></share-bar>
-                    <widget-comment></widget-comment>
+                    <widget-comment class="mt10"></widget-comment>
                 </div>
                 <div class="page-aside pull-right">
                     <widget-activity></widget-activity>
-                    <widget-news></widget-news>
+                    <widget-news class="mt10"></widget-news>
                 </div>
             </div>
         </div>

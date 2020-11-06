@@ -8,6 +8,10 @@
 		<div class="home-swiper">
 			<swiper ref="mySwiper" class="base-card-list pb5" :options="swiperOption">
 				<swiper-slide class="item" v-for="item in 8" :key="item">
+					<div class="icon icon-tag">
+						10月<br />
+						<span>11</span>
+					</div>
 					<a href="" class="img">
 						<img src="../../../assets/temp/101.png" alt="">
 					</a>
@@ -26,7 +30,6 @@
 </template>
 
 <script>
-	import { swiper, swiperSlide } from 'vue-awesome-swiper'
 	export default {
 		components: {
 		},

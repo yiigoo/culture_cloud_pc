@@ -127,8 +127,8 @@ fieldset[disabled] .ivu-input {
 }
 .ivu-checkbox-checked .ivu-checkbox-inner::after {
   transition: none !important;
-  top: 5px;
-  left: 6px !important;
+  top: 4px !important;
+  left: 7px !important;
 }
 .ivu-checkbox-checked:hover {
   border-color: #F36A1C;
@@ -155,4 +155,19 @@ fieldset[disabled] .ivu-input {
 }
 .ivu-message .ivu-icon {
   font-size: 20px;
+}
+.form-survey .ivu-form .ivu-form-item-label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000;
+}
+.form-survey .ivu-checkbox-group-item {
+  display: block;
+  margin: 5px 0;
+}
+.form-survey .ivu-radio-group-item {
+  margin: 5px 0;
+}
+.form-survey .ivu-form-item-content {
+  color: #666666;
 }

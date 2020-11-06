@@ -67,6 +67,41 @@ const routes = [
 		component: resolve => { require(['./pages/heritage/index.vue'], resolve)}
 	},
 	{
+		path: '/heritage',
+		meta: {
+			menu: '/heritage'
+		},
+		component: resolve => { require(['./pages/heritage/index.vue'], resolve)}
+	},
+	{
+		path: '/heritage-directories',
+		meta: {
+			menu: '/heritage'
+		},
+		component: resolve => { require(['./pages/heritage/directories.vue'], resolve)}
+	},
+	{
+		path: '/heritage-directories-detail',
+		meta: {
+			menu: '/heritage'
+		},
+		component: resolve => { require(['./pages/heritage/directoriesDetail.vue'], resolve)}
+	},
+	{
+		path: '/heritage-exhibition',
+		meta: {
+			menu: '/heritage'
+		},
+		component: resolve => { require(['./pages/heritage/exhibition.vue'], resolve)}
+	},
+	{
+		path: '/heritage-exhibition-detail',
+		meta: {
+			menu: '/heritage'
+		},
+		component: resolve => { require(['./pages/heritage/exhibitionDetail.vue'], resolve)}
+	},
+	{
 		path: '/brand',
 		meta: {
 			menu: '/brand'
@@ -95,20 +130,166 @@ const routes = [
 		},
 		component: resolve => { require(['./pages/cultureService/index.vue'], resolve)}
 	},
+
 	{
-		path: '/art-team',
+		path: '/culture-service/list',
 		meta: {
-			menu: '/art-team'
+			menu: '/culture-service'
 		},
-		component: resolve => { require(['./pages/artTeam/list.vue'], resolve)}
+		component: resolve => { require(['./pages/cultureService/list.vue'], resolve)}
 	},
+
+	{
+		path: '/culture-service/detail',
+		meta: {
+			menu: '/culture-service'
+		},
+		component: resolve => { require(['./pages/cultureService/detail.vue'], resolve)}
+	},
+
+	{
+		path: '/culture-service/map',
+		meta: {
+			menu: '/culture-service'
+		},
+		component: resolve => { require(['./pages/cultureService/map.vue'], resolve)}
+	},
+
+
+	{
+		path: '/culture-team',
+		meta: {
+			menu: '/culture-team'
+		},
+		component: resolve => { require(['./pages/cultureTeam/index.vue'], resolve)}
+	},
+	{
+		path: '/culture-team/list',
+		meta: {
+			menu: '/culture-team'
+		},
+		component: resolve => { require(['./pages/cultureTeam/teamList.vue'], resolve)}
+	},
+	{
+		path: '/culture-team/list/detail',
+		meta: {
+			menu: '/culture-team'
+		},
+		component: resolve => { require(['./pages/cultureTeam/teamDetail.vue'], resolve)}
+	},
+
+	{
+		path: '/culture-team/art',
+		meta: {
+			menu: '/culture-team'
+		},
+		component: resolve => { require(['./pages/cultureTeam/artList.vue'], resolve)}
+	},
+	{
+		path: '/culture-team/art/detail',
+		meta: {
+			menu: '/culture-team'
+		},
+		component: resolve => { require(['./pages/cultureTeam/artDetail.vue'], resolve)}
+	},
+	
 	{
 		path: '/volunteer',
 		meta: {
 			menu: '/volunteer'
 		},
-		component: resolve => { require(['./pages/volunteer/list.vue'], resolve)}
+		component: resolve => { require(['./pages/volunteer/index.vue'], resolve)}
 	},
+	{
+		path: '/volunteer/list',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/volunteerList.vue'], resolve)}
+	},
+	{
+		path: '/volunteer/list/detail',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/volunteerDetail.vue'], resolve)}
+	},
+	{
+		path: '/volunteer/star',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/starList.vue'], resolve)}
+	},
+	{
+		path: '/volunteer/star/detail',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/starDetail.vue'], resolve)}
+	},
+
+	{
+		path: '/volunteer/team',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/teamList.vue'], resolve)}
+	},
+	{
+		path: '/volunteer/team/detail',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/teamDetail.vue'], resolve)}
+	},
+
+	{
+		path: '/volunteer/mien',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/mienList.vue'], resolve)}
+	},
+	{
+		path: '/volunteer/mien/detail',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/mienDetail.vue'], resolve)}
+	},
+
+	{
+		path: '/volunteer/training',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/trainingList.vue'], resolve)}
+	},
+	{
+		path: '/volunteer/training/detail',
+		meta: {
+			menu: '/volunteer'
+		},
+		component: resolve => { require(['./pages/volunteer/trainingDetail.vue'], resolve)}
+	},
+
+	{
+		path: '/works',
+		meta: {
+			menu: '/works'
+		},
+		component: resolve => { require(['./pages/works/list.vue'], resolve)}
+	},
+	{
+		path: '/works/detail',
+		meta: {
+			menu: '/works'
+		},
+		component: resolve => { require(['./pages/works/detail.vue'], resolve)}
+	},
+
+
 	{
 		path: '/login',
 		meta: {
@@ -147,6 +328,50 @@ const routes = [
 				},
 				component:resolve => { require(['./pages/user/activity.vue'], resolve)}
 			},
+
+			{
+				path:'/user/activity/detail',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/activity'
+				},
+				component:resolve => { require(['./pages/user/activityDetail.vue'], resolve)}
+			},
+			{
+				path:'/user/volunteer',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/volunteer'
+				},
+				component:resolve => { require(['./pages/user/volunteer.vue'], resolve)}
+			},
+
+			{
+				path:'/user/volunteer/detail',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/volunteer'
+				},
+				component:resolve => { require(['./pages/user/volunteerDetail.vue'], resolve)}
+			},
+			{
+				path:'/user/venue',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/venue'
+				},
+				component:resolve => { require(['./pages/user/venue.vue'], resolve)}
+			},
+
+			{
+				path:'/user/venue/detail',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/venue'
+				},
+				component:resolve => { require(['./pages/user/venueDetail.vue'], resolve)}
+			},
+			
 			{
 				path:'/user/integral',
 				meta: {
@@ -154,8 +379,62 @@ const routes = [
 					subMenu: '/user/integral'
 				},
 				component:resolve => { require(['./pages/user/integral.vue'], resolve)}
-			}
+			},
+			{
+				path:'/user/view',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/view'
+				},
+				component:resolve => { require(['./pages/user/view.vue'], resolve)}
+			},
+			{
+				path:'/user/message',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/message'
+				},
+				component:resolve => { require(['./pages/user/message.vue'], resolve)}
+			},
+			{
+				path:'/user/comment',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/comment'
+				},
+				component:resolve => { require(['./pages/user/comment.vue'], resolve)}
+			},
+			{
+				path:'/user/feedback',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/feedback'
+				},
+				component:resolve => { require(['./pages/user/feedback.vue'], resolve)}
+			},
 		]
+	},
+	{
+		path:'/user/shop',
+		meta: {
+			menu: '/user'
+		},
+		component:resolve => { require(['./pages/user/shop/list.vue'], resolve)}
+	},
+	{
+		path:'/user/shop/detail',
+		meta: {
+			menu: '/user'
+		},
+		component:resolve => { require(['./pages/user/shop/detail.vue'], resolve)}
+	},
+	{
+		path:'/user/survey',
+		meta: {
+			menu: '/user',
+			subMenu: '/user/survey'
+		},
+		component:resolve => { require(['./pages/user/survey.vue'], resolve)}
 	},
 	
 	// 其他页面

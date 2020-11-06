@@ -1,7 +1,7 @@
 <template>
 	<div>
         <!-- banner -->
-        <page-banner :url="require('../../assets/banner/news.png')"></page-banner>
+        <page-banner :url="require('../../assets/banner/banner-service.png')"></page-banner>
 		<div class="page-container">
 			
             <div class="breadcrumb">
@@ -38,7 +38,9 @@
                         </div>
                     </div>
                     <div class="more">
-                        <a href="">查看所有景点</a>
+                        <router-link to="/culture-service/map">
+                            查看所有景点
+                        </router-link>
                     </div>
                 </div>
                 <div class="map-show">

@@ -3,7 +3,7 @@
         <div class="user-content page-content">
 			<div class="exchange-md">
 				<div class="ex-change-top">
-					<a href="" class="btn pull-right">积分商城</a>
+					<router-link to="/user/shop" class="btn pull-right">积分商城</router-link>
 					当前积分<br />
 					<span class="imt">999</span> 分
 				</div>

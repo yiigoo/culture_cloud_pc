@@ -1,6 +1,6 @@
 <template>
 	<div>
-        <page-banner :url="require('../../assets/banner/user.png')"></page-banner>
+        <page-banner :url="require('../../assets/banner/banner-user.png')"></page-banner>
         
         <div class="page-container">
             <div class="user-md clearfix">
@@ -25,17 +25,26 @@
                                 </router-link>
                             </li>
                             <li>
-                                <a href="">
+                                <a @click="modalVisible = true">
                                     <i class="icon icon-user-logout"></i>
                                     退出
                                 </a>
-                                </router-link>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <router-view></router-view>
             </div>
+            <Modal
+                v-model="modalVisible"
+                closable
+                width="400"
+                title="是否退出登录？">
+                <div slot="footer">
+                    <Button class="mr20" @click="modalVisible = false">取消</Button>
+                    <Button class="border-primary" @click="logout">确定</Button>
+                </div>
+            </Modal>
         </div>
 	</div>
 </template>
@@ -48,6 +57,7 @@
         data() {
             return {
                 currentMenu: '/user/account',
+                modalVisible: false,
                 menus: [
                     {
                         to: '/user/account',
@@ -60,12 +70,12 @@
                         name: '活动报名'
                     },
                     {
-                        to: '',
+                       to: '/user/venue',
                         icon: 'house',
                         name: '场馆预订'
                     },
                     {
-                        to: '',
+                        to: '/user/volunteer',
                         icon: 'volunteer',
                         name: '志愿者服务'
                     },
@@ -75,31 +85,42 @@
                         name: '我的积分'
                     },
                     {
-                        to: '',
+                        to: '/user/comment',
                         icon: 'comment',
                         name: '我的评论'
                     },
                     {
-                        to: '',
+                        to: '/user/view',
                         icon: 'view',
                         name: '我的足迹'
                     },
                     {
-                        to: '',
+                        to: '/user/message',
                         icon: 'message',
                         name: '我的消息'
                     },
                     {
-                        to: '',
+                        to: '/user/feedback',
                         icon: 'feedback',
                         name: '我的反馈'
                     },
                     {
-                        to: '',
+                       to: '/user/survey',
                         icon: 'survey',
                         name: '问卷调查'
                     }
                 ]      
+            }
+        },
+        methods: {
+            logout() {
+                sessionStorage.token = ''
+                this.modalVisible =false
+                setTimeout(()=>{
+                    this.$router.push({
+                        path: '/login'
+                    })
+                },500)
             }
         },
         watch: {
@@ -109,7 +130,6 @@
 			}
 		},
         mounted() {
-            console.log(this.$route.path)
             const currentMenu = this.$route.meta.subMenu
             this.menus.forEach(i=>{
                 if (i.to === currentMenu) {

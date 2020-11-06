@@ -6,6 +6,8 @@ import pagerRows from './pagerRows'
 import searchTypes from './searchTypes'
 import widgetComment from './widgetComment'
 import shareBar from './shareBar'
+import widgetGoods from './widgetGoods'
+import widgetRelation from './widgetRelation'
 
 const components = {
     pageBanner,
@@ -15,7 +17,9 @@ const components = {
     pagerRows,
     searchTypes,
     widgetComment,
-    shareBar
+    shareBar,
+    widgetGoods,
+    widgetRelation
 };
 
 const webComponents = {

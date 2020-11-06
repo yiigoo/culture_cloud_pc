@@ -68,7 +68,7 @@
 						name: '文旅服务',
 					},
 					{
-						to: '/art-team',
+						to: '/culture-team',
 						name: '文化社团',
 					},
 					{
@@ -97,15 +97,7 @@
 		watch: {
 			'$route.meta' (meta) {
 				// 默认指向目录
-				const currentMenu = meta.menu
-				this.menus.forEach(i=>{
-					if (i.to === currentMenu) {
-						this.currentMenu = currentMenu
-					}
-				})
-				if( !currentMenu) {
-					this.currentMenu = ''
-				}
+				this.currentMenu = meta.menu
 			}
 		},
 		mounted() {
