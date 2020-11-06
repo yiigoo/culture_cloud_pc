@@ -2,7 +2,7 @@
 	<div>
         <page-banner :url="require('../../assets/banner/user.png')"></page-banner>
         
-        <div class="page-conainter">
+        <div class="page-container">
             <div class="user-md clearfix">
                 <div class="user-menu page-aside">
                     <div class="top">
@@ -70,7 +70,7 @@
                         name: '志愿者服务'
                     },
                     {
-                        to: '',
+                        to: '/user/integral',
                         icon: 'integral',
                         name: '我的积分'
                     },

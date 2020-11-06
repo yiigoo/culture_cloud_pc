@@ -3,7 +3,7 @@
 		<!-- banner -->
         <page-banner :url="require('../../assets/banner/activity.png')"></page-banner>
         
-        <div class="page-conainter">
+        <div class="page-container">
 
             <div class="breadcrumb">
                 <router-link to="/">首页</router-link>
@@ -12,9 +12,8 @@
                 <i class="icon icon-arrow-right"></i>
                 <span>二级目录</span>
             </div>
-            
+
             <div class="search-catalogue-md">
-                <div class="search-catalogue-md">
                 <search-types :types="types" @on-change="type1Change">
                     选择类型：
                 </search-types>
@@ -22,18 +21,19 @@
                     选择状态：
                 </search-types>
             </div>
-            </div>
             <!-- request 接口 ， slotProps.rows = data.rows , pageSize 每页个数 -->
             <pager-rows ref="rows" request="" :pageSize="9">
                 <template v-slot="slotProps">
                     <div class="base-card-list-large clearfix">
                         <div class="item" v-for="(item,index) in 9" :key="index">
-                            <a href="" class="img">
+                            <router-link :to="`/venue-detail?id=${1}`" class="img">
                                 <img src="../../assets/temp/201.png" alt="">
-                            </a>
+                            </router-link>
                             <div class="wrapper">
                                 <div class="title">
-                                    <a href="">场馆名称场馆名称场馆名称</a>
+                                    <router-link :to="`/venue-detail?id=${1}`">
+                                        场馆名称场馆名称场馆名称
+                                    </router-link>
                                 </div>
                                 
                                 <div class="sub">

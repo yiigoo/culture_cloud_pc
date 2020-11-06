@@ -1,6 +1,6 @@
 <template>
 	<div class="header header-index">
-        <div class="page-conainter">
+        <div class="page-container">
             <div class="logo">
                 <a href="#"><img src="../assets/logo.png" alt=""></a>
             </div>

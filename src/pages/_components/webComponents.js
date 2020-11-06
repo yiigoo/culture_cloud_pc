@@ -4,6 +4,8 @@ import widgetNews from './widgetNews'
 import operateTips from './operateTips'
 import pagerRows from './pagerRows'
 import searchTypes from './searchTypes'
+import widgetComment from './widgetComment'
+import shareBar from './shareBar'
 
 const components = {
     pageBanner,
@@ -11,7 +13,9 @@ const components = {
     widgetNews,
     operateTips,
     pagerRows,
-    searchTypes
+    searchTypes,
+    widgetComment,
+    shareBar
 };
 
 const webComponents = {

@@ -3,7 +3,7 @@
 		<!-- banner -->
         <page-banner :url="require('../../assets/banner/activity.png')"></page-banner>
         
-        <div class="page-conainter">
+        <div class="page-container">
 
             <div class="breadcrumb">
                 <router-link to="/">首页</router-link>
@@ -26,15 +26,17 @@
                 <template v-slot="slotProps">
                     <div class="base-card-list-large clearfix">
                         <div class="item" v-for="(item,index) in slotProps.rows" :key="index">
-                            <a href="" class="img">
+                            <router-link :to="`/activity-detail?id=${1}`" class="img">
                                 <div class="tag" :class="{ active: item.status === '报名中' }">
                                     {{ item.status }}
                                 </div>
                                 <img :src="item.pictures" alt="">
-                            </a>
+                            </router-link>
                             <div class="wrapper">
                                 <div class="title">
-                                    <a href="">{{ item.name }}</a>
+                                    <router-link :to="`/activity-detail?id=${1}`">
+                                        {{ item.name }}
+                                    </router-link>
                                 </div>
                                 
                                 <div class="sub">

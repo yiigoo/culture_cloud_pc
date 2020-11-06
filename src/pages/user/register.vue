@@ -1,7 +1,7 @@
 <template>
 	<div>
         <page-banner :url="require('../../assets/banner/login.png')"></page-banner>
-		<div class="page-conainter page-conainter-inner" v-if="!finished">
+		<div class="page-container page-container-inner" v-if="!finished">
 			<div class="register-md">
 				<div class="title">
 					<div class="inner">

@@ -1,7 +1,7 @@
 <template>
     <div>
         <banner></banner>
-        <div class="page-conainter">
+        <div class="page-container">
             <div class="home-md">
 
                 <div class="clearfix home-row">

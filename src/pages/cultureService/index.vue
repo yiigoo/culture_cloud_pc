@@ -2,7 +2,7 @@
 	<div>
         <!-- banner -->
         <page-banner :url="require('../../assets/banner/news.png')"></page-banner>
-		<div class="page-conainter">
+		<div class="page-container">
 			
             <div class="breadcrumb">
                 <router-link to="/">首页</router-link>

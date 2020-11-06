@@ -72,6 +72,9 @@ fieldset[disabled] .ivu-input {
 .ivu-btn.ivu-btn-warning {
   background: linear-gradient(180deg, #FF881A 0%, #F36A1C 100%);
 }
+.ivu-btn.border-primary {
+  border-color: #158A7E;
+}
 .ivu-radio {
   margin-right: 5px;
 }
@@ -133,4 +136,23 @@ fieldset[disabled] .ivu-input {
 .ivu-checkbox-checked .ivu-checkbox-focus {
   box-shadow: none;
   border-color: #F36A1C;
+}
+.ivu-modal-header {
+  border-bottom: none;
+  padding-top: 30px;
+}
+.ivu-modal-header p,
+.ivu-modal-header-inner {
+  text-align: center;
+  font-size: 18px;
+  color: #000;
+  font-weight: bold;
+}
+.ivu-modal-footer {
+  padding-bottom: 30px;
+  border-top: none;
+  text-align: center;
+}
+.ivu-message .ivu-icon {
+  font-size: 20px;
 }

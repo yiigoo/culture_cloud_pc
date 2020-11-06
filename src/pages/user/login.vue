@@ -1,7 +1,7 @@
 <template>
 	<div>
         <page-banner :url="require('../../assets/banner/login.png')"></page-banner>
-		<div class="page-conainter page-conainter-inner">
+		<div class="page-container page-container-inner">
             <div class="login-md">
                 <div class="left">
                     <div class="tabs">
@@ -40,7 +40,7 @@
         },
         data() {
             return  {
-                type: 'qrcode'
+                type: 'password'
             }
         },
 		mounted() {

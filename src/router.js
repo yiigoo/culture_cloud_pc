@@ -12,7 +12,24 @@ const routes = [
 		meta: {
 			menu: '/news'
 		},
-		component: resolve => { require(['./pages/news/list.vue'], resolve)}
+		redirect: '/news/list',
+		component: resolve => { require(['./pages/news/index.vue'], resolve)},
+		children:[
+			{
+				path:'/news/list',
+				meta: {
+					menu: '/news'
+				},
+				component:resolve => { require(['./pages/news/list.vue'], resolve)}
+			},
+			{
+				path:'/news/detail',
+				meta: {
+					menu: '/news'
+				},
+				component:resolve => { require(['./pages/news/detail.vue'], resolve)}
+			}
+		]
 	},
 	{
 		path: '/activity',
@@ -22,6 +39,13 @@ const routes = [
 		component: resolve => { require(['./pages/activity/list.vue'], resolve)}
 	},
 	{
+		path: '/activity-detail',
+		meta: {
+			menu: '/activity'
+		},
+		component: resolve => { require(['./pages/activity/detail.vue'], resolve)}
+	},
+	{
 		path: '/venue',
 		meta: {
 			menu: '/venue'
@@ -29,11 +53,18 @@ const routes = [
 		component: resolve => { require(['./pages/venue/list.vue'], resolve)}
 	},
 	{
+		path: '/venue-detail',
+		meta: {
+			menu: '/venue'
+		},
+		component: resolve => { require(['./pages/venue/detail.vue'], resolve)}
+	},
+	{
 		path: '/heritage',
 		meta: {
 			menu: '/heritage'
 		},
-		component: resolve => { require(['./pages/heritage/list.vue'], resolve)}
+		component: resolve => { require(['./pages/heritage/index.vue'], resolve)}
 	},
 	{
 		path: '/brand',
@@ -115,6 +146,14 @@ const routes = [
 					subMenu: '/user/activity'
 				},
 				component:resolve => { require(['./pages/user/activity.vue'], resolve)}
+			},
+			{
+				path:'/user/integral',
+				meta: {
+					menu: '/user',
+					subMenu: '/user/integral'
+				},
+				component:resolve => { require(['./pages/user/integral.vue'], resolve)}
 			}
 		]
 	},

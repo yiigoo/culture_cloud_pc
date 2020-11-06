@@ -1,5 +1,5 @@
 <template>
-	<div class="page-conainter page-conainter-inner">
+	<div class="page-container page-container-inner">
 		<div class="global-opt-tips">
 			<div class="wrapper">
 				<i class="icon" :class="[`icon-${type}`]"></i>
